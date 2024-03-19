@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard accessibilité</title>
+  <link rel="stylesheet" href="/style.min.css">
+</head>
+
+<body>
+  <header role="banner">
+    <div class="wrapper">
+      <h1><span lang="en">Dashboard</span> accessibilité</h1>
+    </div>
+  </header>
+  <main role="main" class="wrapper">
+    <div class="warning">
+      <h2>Objectifs</h2>
+      <ul>
+        <li>Monitorer, par site, les tests automatisés d'accessibilité (<a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a>) sur un échantillon de page en s'appuyant sur le moteur <a href="https://github.com/dequelabs/axe-core">axe-core</a>
+        <li>Suivre une tendance par site</li>
+        <li>Analyser les erreurs, par site et par URL</li>
+        <li>Mettre en place des actions correctives</li>
+      </ul>
+      <h2>Limitations</h2>
+      <ul>
+        <li>Cet outil n'a pas vocation à indiquer un taux de conformité</li>
+        <li>Cet outil ne permets pas de tester les pages qui sont derrière une authentification ou un accès restreint</li>
+        <li>Une page peut avoir 0 erreur et tout de même contenir des problèmes d'accessibilité (<a href="https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/">Building the most inaccessible site possible with a perfect Lighthouse score</a>)</li>
+        <li>Cette analyse devra être complétée par une expertise humaine</li>
+      </ul>
+    </div>
+    <div id="container" aria-hidden="true"></div>
+    <button type="button" class="disclosure-trigger">Afficher la synthèse sous forme de tableau</button>
+    <table class="table disclosure-container">
+      <caption>Synthèse du nombre d'erreur axe-core par site</caption>
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <% for (const siteName in results) { %>
+            <th scope="col"><%= siteName %></th>
+          <% } %>
+        </tr>
+      </thead>
+      <tbody>
+        <% allDates.forEach(date => { %>
+          <tr>
+            <th scope="row"><%= date %></th>
+            <% for (const siteName in results) { %>
+              <% const siteErrors = (dateResults[date] && dateResults[date][siteName]) ? dateResults[date][siteName] : 0; %>
+              <td><%= siteErrors %></td>
+            <% } %>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    
+    <% let siteIndex = 0; %>
+    <% let analysisIndex = 0; %>
+    <% let urlIndex = 0; %>
+    <% for (const siteName in results) { %>
+    <div class="site">
+      <h2 id="site-<%= siteIndex %>">Site: <%= siteName %></h2>
+      <% let totalSiteErrors = 0; %>
+      <div class="analysis">
+      <% for (const analysis of results[siteName]) { %>
+        <div>
+          <% let totalErrors = 0; %>
+          <% for (const url of analysis.urls) { %>
+          <% totalErrors += url.totalViolations; %>
+          <% } %>
+          <% totalSiteErrors += totalErrors; %>
+          <% analysisIndex++; %>
+          <h3>
+            <% if (totalErrors === 0) { %>
+              <span aria-hidden="true">✅</span>
+            <% } else { %>
+              <span aria-hidden="true">❌</span>
+            <% } %>
+            <span id="analysis-<%= siteIndex %>-<%= analysisIndex %>">Date de l'analyse :
+            <%= analysis.analysisDate %></span> -
+            <%= totalErrors %> erreurs <button type="button" class="disclosure-trigger" aria-describedby="site-<%= siteIndex %> analysis-<%= siteIndex %>-<%= analysisIndex %>">Afficher les résultats</button></h3>
+          <div class="disclosure-container">
+            <% for (const url of analysis.urls) { %>
+            <div>
+              <h4>
+                <% if (url.totalViolations === 0) { %>
+                  <span aria-hidden="true">✅</span>
+                <% } else { %>
+                  <span aria-hidden="true">❌</span>
+                <% } %>
+                <span id="url-<%= siteIndex %>-<%= analysisIndex %>-<%= urlIndex %>">URL :
+                <%= url.url %></span> - <%= url.totalViolations %> erreurs <% if (url.totalViolations != 0) { %><button type="button" class="disclosure-trigger" aria-describedby="site-<%= siteIndex %> analysis-<%= siteIndex %>-<%= analysisIndex %> url-<%= siteIndex %>-<%= analysisIndex %>-<%= urlIndex %>">Afficher les résultats</button><% } %></h4>
+              <% urlIndex++; %>
+              <div class="disclosure-container">
+                <ul>
+                  <% for (const violation of url.results) { %>
+                  <li>
+                    <strong>Description :</strong>
+                    <%= violation.description %>
+                    <ul>
+                      <li><strong>Impact :</strong>
+                        <%= violation.impact %>
+                      </li>
+                      <li><strong>Règle :</strong>
+                        <%= violation.id %>
+                      </li>
+                      <li><strong>Tags :</strong>
+                        <%= violation.tags.join(', ') %>
+                      </li>
+                      <% if (violation.nodes && violation.nodes.length > 0) { %>
+                      <li>
+                        <strong>Élément HTML concerné :</strong>
+                        <ul>
+                          <% for (const node of violation.nodes) { %>
+                          <li>
+                            <code>
+                              <%= node.html %></code>
+                          </li>
+                          <% } %>
+                        </ul>
+                      </li>
+                      <% } %>
+                    </ul>
+                  </li>
+                  <% } %>
+                </ul>
+              </div>
+            </div>
+            <% } %>
+          </div>
+        </div>
+      <% } %>
+      <p>
+        Nombre total d'erreurs pour le site : <%= totalSiteErrors %>.
+      </p>
+      </div>
+      <% siteIndex++; %>
+    </div>
+    <% } %>
+  </main>
+  <footer role="contentinfo">
+    <div class="wrapper">
+      <p>Fait avec <span aria-hidden="true">❤️</span> <span class="sr-only">amour</span> par <a href="https://www.temesis.com/">Temesis</a>.</p>
+    </div>
+  </footer>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="/script.min.js"></script>
+</body>
+
+</html>

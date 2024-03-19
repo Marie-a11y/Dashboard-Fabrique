@@ -1,0 +1,24 @@
+{
+    "name": "dashboard-accessibilite",
+    "version": "1.0.0",
+    "description": "Dashboard d'accessibilité basé sur axe-core",
+    "main": "server.js",
+    "dependencies": {
+      "@axe-core/puppeteer": "^4.8.5",
+      "axe-core": "^4.2.2",
+      "canvas": "^2.11.2",
+      "cssnano": "^6.1.0",
+      "ejs": "^3.1.9",
+      "express": "^4.17.1",
+      "html-minifier": "^4.0.0",
+      "postcss-cli": "^11.0.0",
+      "puppeteer": "^22.5.0",
+      "uglify-js": "^3.17.4"
+    },
+    "scripts": {
+      "start": "npm run minify-js && npm run minify-css && node server.js",
+      "minify-js": "uglifyjs ./public/*.js -o ./public/script.min.js",
+      "minify-css": "postcss ./public/*.css -o ./public/style.min.css"
+    }
+  }
+  
