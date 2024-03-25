@@ -56,7 +56,12 @@ async function runAxeCoreTests(page, url, analysisDate) {
 async function fetchHTMLContent(url) {
     try {
         console.log(`Récupération du contenu HTML de l'URL : ${url}`);
-        const browser = await puppeteer.launch({ args: ['--disable-http2'] });
+        const browser = await puppeteer.launch({ 
+            args: [
+                '--no-sandbox', 
+                '--disable-setuid-sandbox'
+            ]
+        }); 
         const page = await browser.newPage();
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
         await page.goto(url, {
@@ -183,6 +188,6 @@ app.get('/', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Le serveur est lancé sur http://localhost:${port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Server is running on port ${process.env.PORT}`);
 });
