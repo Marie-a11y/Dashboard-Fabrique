@@ -31,9 +31,12 @@
         <li>Cette analyse devra être complétée par une expertise humaine</li>
       </ul>
     </div>
-    <div id="container" aria-hidden="true"></div>
-    <button type="button" class="disclosure-trigger">Afficher la synthèse sous forme de tableau</button>
-    <table class="table disclosure-container">
+    <% if (!Object.keys(results).length) { %>
+      <p class="noresults">Aucun résultat disponible pour le moment. Le dossier "results" est vide.</p>
+    <% } else { %>
+      <div id="container" aria-hidden="true"></div>
+      <button type="button" class="disclosure-trigger">Afficher la synthèse sous forme de tableau</button>
+      <table class="table disclosure-container">
       <caption>Synthèse du nombre d'erreur axe-core par site</caption>
       <thead>
         <tr>
@@ -54,8 +57,8 @@
           </tr>
         <% }); %>
       </tbody>
-    </table>
-    
+      </table>
+    <% } %>
     <% let siteIndex = 0; %>
     <% let analysisIndex = 0; %>
     <% let urlIndex = 0; %>

@@ -57,6 +57,10 @@ header h1 {
   margin-top: 0;
 }
 
+.noresults {
+  margin: 4rem 0;
+}
+
 .warning {
   background: #fefaed;
   border: 1px solid #f4ab01;

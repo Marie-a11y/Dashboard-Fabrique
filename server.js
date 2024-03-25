@@ -188,6 +188,6 @@ app.get('/', async (req, res) => {
     }
 });
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
+app.listen(port, () => {
+    console.log(`Le serveur est lancé sur http://localhost:${port}`);
 });
