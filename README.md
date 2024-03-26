@@ -1,5 +1,8 @@
 # dashboard-a11y
 
+Démonstration : [https://dashboard-a11y.alwaysdata.net/](https://dashboard-a11y.alwaysdata.net/).
+![][demo.webp]
+
 ## Objectifs
 - Monitorer, par site, les tests automatisés d'accessibilité ([WCAG 2.2](https://www.w3.org/TR/WCAG22/)) sur un échantillon de page en s'appuyant sur le moteur [axe-core](https://github.com/dequelabs/axe-core)
 - Suivre une tendance par site
@@ -19,3 +22,6 @@
 2. Installer les modules nodes : `npm i`
 3. Pour lancer l'affichage du dashboard : `npm run build`. Le dashboard sera visible sur `http://localhost:3000/` 
 4. Pour lancer l'analyse, aller sur la page `http://localhost:3000/test` (s'assurer que le serveur soit bien lancé avant, voir l'étape 3)
+
+## Licence
+To be defined.
