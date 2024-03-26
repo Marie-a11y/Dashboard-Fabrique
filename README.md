@@ -2,7 +2,7 @@
 
 Démonstration : [https://dashboard-a11y.alwaysdata.net/](https://dashboard-a11y.alwaysdata.net/).
 
-![][/demo.webp]
+![](demo.webp)
 
 ## Objectifs
 - Monitorer, par site, les tests automatisés d'accessibilité ([WCAG 2.2](https://www.w3.org/TR/WCAG22/)) sur un échantillon de page en s'appuyant sur le moteur [axe-core](https://github.com/dequelabs/axe-core)
