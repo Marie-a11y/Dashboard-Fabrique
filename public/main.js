@@ -19,14 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener('click', function() {
 
       let container = button.nextElementSibling;
+      
       // Vérifier si le bouton est dans un parent
       if (container === null) {
         parent = button.parentElement;
         container = parent.nextElementSibling;
       } 
-      if (container !== null) {
-        container.classList.add('toto');
-      }
 
       // Vérifier si le bouton est actuellement "ouvert" ou "fermé"
       const isExpanded = this.getAttribute('aria-expanded') === 'true';

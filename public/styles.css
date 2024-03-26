@@ -1,16 +1,42 @@
+:root{
+  --color-grey-alpha:#ecf0f1;
+  --color-grey-beta:#dee2e6;
+  --color-black-alpha:#262A2D;
+  --color-black-beta:#343434;
+  --color-white-alpha:#fff;
+  --color-blue-alpha:#3a6a91;
+  --color-yellow-alpha:#fefaed;
+  --color-yellow-beta:#f4ab01;
+}
+
+/* GENERIC */
 body {
-  background: #ecf0f1;
-  color: #262A2D;
+  background: var(--color-grey-alpha);
+  color: var(--color-black-alpha);
   font-family: Arial,sans-serif;
   margin: 0;
 }
-
 code {
-  background: #343434;
-  color: #fff;
+  background: var(--color-black-beta);
+  color: var(--color-white-alpha);
   padding: 0.4rem;
 }
+a{
+  color: inherit;
+}
+header, footer {
+  background: var(--color-blue-alpha);
+  color: var(--color-white-alpha);
+  padding: 2rem;
+}
+header .title {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1.34rem 0;
+  text-transform: uppercase;
+}
 
+/* UTIL */
 .sr-only {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px); 
@@ -24,24 +50,19 @@ code {
   white-space: nowrap;            
 }
 
-a{
-  color: inherit;
-}
-
-header, footer {
-  background: #3a6a91;
-  color: #fff;
-  padding: 2rem;
-}
-header h1 {
-  text-transform: uppercase;
-}
-
+/* STRUCTURE */
 .wrapper {
   max-width: 60em;
   margin: 0 auto;
 }
+.site {
+  margin: 3rem 0;
+}
+#container {
+  margin-bottom: 1rem;
+}
 
+/* DISCLOSURE */
 .disclosure-container[aria-hidden="true"] {
   display: none;
 }
@@ -49,6 +70,7 @@ header h1 {
   padding: .5rem 0;
 }
 
+/* ANALYSIS */
 .analysis {
   display: flex;
   flex-direction: column-reverse;
@@ -56,14 +78,14 @@ header h1 {
 .analysis > p {
   margin-top: 0;
 }
-
 .noresults {
   margin: 4rem 0;
 }
 
+/* WARNING */
 .warning {
-  background: #fefaed;
-  border: 1px solid #f4ab01;
+  background: var(--color-yellow-alpha);
+  border: 1px solid var(--color-yellow-beta);
   padding: 1rem 2rem;
   border-radius: 10px;
   margin: 2rem 0;
@@ -72,18 +94,14 @@ header h1 {
   margin: .5rem 0;
 }
 
-.site {
-  margin: 3rem 0;
-}
-
-#container {
-  margin-bottom: 1rem;
-}
-
+/* TABLE */
 .table {
+  overflow-x: auto;
+}
+.table table {
   width:100%;
   border-collapse:collapse;
-  border:1px solid #dee2e6;
+  border:1px solid var(--color-grey-beta);
   margin-bottom:1.5em
 }
 .table caption {
@@ -91,7 +109,7 @@ header h1 {
 }
 .table thead th {
   vertical-align:middle;
-  border-bottom:2px solid #dee2e6
+  border-bottom:2px solid var(--color-grey-beta);
 }
 .table thead th span {
   font-size:.75em
@@ -99,7 +117,7 @@ header h1 {
 .table td,
 .table th {
   padding:.75rem;
-  border:1px solid #dee2e6
+  border:1px solid var(--color-grey-beta);
 }
 .table tbody tr:nth-of-type(odd) {
   background-color:rgba(0,0,0,.05)

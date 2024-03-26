@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard accessibilité</title>
+  <title>Dashboard accessibilité - Démonstration</title>
   <link rel="stylesheet" href="/style.min.css">
 </head>
 
 <body>
   <header role="banner">
     <div class="wrapper">
-      <h1><span lang="en">Dashboard</span> accessibilité</h1>
+      <h1 class="title"><span lang="en">Dashboard</span> accessibilité - Démonstration</h1>
     </div>
   </header>
   <main role="main" class="wrapper">
@@ -36,28 +36,30 @@
     <% } else { %>
       <div id="container" aria-hidden="true"></div>
       <button type="button" class="disclosure-trigger">Afficher la synthèse sous forme de tableau</button>
-      <table class="table disclosure-container">
-      <caption>Synthèse du nombre d'erreur axe-core par site</caption>
-      <thead>
-        <tr>
-          <th scope="col">Date</th>
-          <% for (const siteName in results) { %>
-            <th scope="col"><%= siteName %></th>
-          <% } %>
-        </tr>
-      </thead>
-      <tbody>
-        <% allDates.forEach(date => { %>
+      <div class="table disclosure-container">
+      <table>
+        <caption>Synthèse du nombre d'erreur axe-core par site</caption>
+        <thead>
           <tr>
-            <th scope="row"><%= date %></th>
+            <th scope="col">Date</th>
             <% for (const siteName in results) { %>
-              <% const siteErrors = (dateResults[date] && dateResults[date][siteName]) ? dateResults[date][siteName] : 0; %>
-              <td><%= siteErrors %></td>
+              <th scope="col"><%= siteName %></th>
             <% } %>
           </tr>
-        <% }); %>
-      </tbody>
+        </thead>
+        <tbody>
+          <% allDates.forEach(date => { %>
+            <tr>
+              <th scope="row"><%= date %></th>
+              <% for (const siteName in results) { %>
+                <% const siteErrors = (dateResults[date] && dateResults[date][siteName]) ? dateResults[date][siteName] : 0; %>
+                <td><%= siteErrors %></td>
+              <% } %>
+            </tr>
+          <% }); %>
+        </tbody>
       </table>
+      </div>
     <% } %>
     <% let siteIndex = 0; %>
     <% let analysisIndex = 0; %>
@@ -145,10 +147,10 @@
   </main>
   <footer role="contentinfo">
     <div class="wrapper">
-      <p>Fait avec <span aria-hidden="true">❤️</span> <span class="sr-only">amour</span> par <a href="https://www.temesis.com/">Temesis</a>.</p>
+      <p>Fait avec amour par <a href="https://www.temesis.com/">Temesis</a>.</p>
     </div>
   </footer>
-  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="/highcharts.js"></script>
   <script src="/script.min.js"></script>
 </body>
 
