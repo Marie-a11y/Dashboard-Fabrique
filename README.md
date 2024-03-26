@@ -1,28 +1,28 @@
 # dashboard-a11y
 
-Démonstration : [https://dashboard-a11y.alwaysdata.net/](https://dashboard-a11y.alwaysdata.net/).
+Demonstration : [https://dashboard-a11y.alwaysdata.net/](https://dashboard-a11y.alwaysdata.net/).
 
 ![](demo.webp)
 
-## Objectifs
-- Monitorer, par site, les tests automatisés d'accessibilité ([WCAG 2.2](https://www.w3.org/TR/WCAG22/)) sur un échantillon de page en s'appuyant sur le moteur [axe-core](https://github.com/dequelabs/axe-core)
-- Suivre une tendance par site
-- Analyser les erreurs, par site et par URL
-- Mettre en place des actions correctives
+## Objectives
+- Monitor, by site, automated accessibility tests ([WCAG 2.2](https://www.w3.org/TR/WCAG22/)) on a sample page using the [axe-core](https://github.com/dequelabs/axe-core) engine
+- Monitor trends by site
+- Analyze errors, by site and by URL
+- Implement corrective actions
 
 ## Limitations
-- Cet outil n'a pas vocation à indiquer un taux de conformité
-- Cet outil ne permets pas de tester les pages qui sont derrière une authentification ou un accès restreint
-- Une page peut avoir 0 erreur et tout de même contenir des problèmes d'accessibilité ([Building the most inaccessible site possible with a perfect Lighthouse score](https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/))
-- Cette analyse devra être complétée par une expertise humaine
+- This tool is not designed to indicate a compliance rate.
+- This tool does not allow you to test pages that are behind authentication or restricted access.
+- A page can have 0 errors and still contain accessibility problems ([Building the most inaccessible site possible with a perfect Lighthouse score](https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/)).
+- This analysis must be completed by a human expert.
 
-## Comment cela fonctionne ?
-1. Remplir le fichier `urls.json` avec les informations suivantes : 
-    - le nom du site : `siteName`
-    - les URLs : `siteUrls`
-2. Installer les modules nodes : `npm i`
-3. Pour lancer l'affichage du dashboard : `npm run build`. Le dashboard sera visible sur `http://localhost:3000/` 
-4. Pour lancer l'analyse, aller sur la page `http://localhost:3000/test` (s'assurer que le serveur soit bien lancé avant, voir l'étape 3)
+## How it works
+1. Fill in the `urls.json` file with the following information: 
+    - site name: `siteName`
+    - URLs: `siteUrls`
+2. Install nodes modules: `npm i`
+3. To start displaying the dashboard: `npm run build`. The dashboard will be visible at `http://localhost:3000/` 
+4. To launch the analysis, go to `http://localhost:3000/test` (make sure the server is launched first, see step 3).
 
 ## Licence
 To be defined.
