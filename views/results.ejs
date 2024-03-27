@@ -18,16 +18,16 @@
     <div class="warning">
       <h2>Objectifs</h2>
       <ul>
-        <li>Monitorer, par site, les tests automatisés d'accessibilité (<a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a>) sur un échantillon de pages en s'appuyant sur le moteur <a href="https://github.com/dequelabs/axe-core">axe-core</a>
+        <li>Monitorer, par site, les tests automatisés d'accessibilité (<a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a>) sur un échantillon de pages en s’appuyant sur le moteur <a href="https://github.com/dequelabs/axe-core">axe-core</a>
         <li>Suivre une tendance par site</li>
         <li>Analyser les erreurs, par site et par URL</li>
         <li>Mettre en place des actions correctives</li>
       </ul>
       <h2>Limitations</h2>
       <ul>
-        <li>Cet outil n'a pas vocation à indiquer un taux de conformité</li>
+        <li>Cet outil n’a pas vocation à indiquer un taux de conformité</li>
         <li>Cet outil ne permet pas de tester les pages qui sont derrière une authentification ou un accès restreint</li>
-        <li>Une page peut avoir 0 erreur et tout de même contenir des problèmes d'accessibilité (<a href="https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/">Building the most inaccessible site possible with a perfect Lighthouse score</a>)</li>
+        <li>Une page peut avoir 0 erreur et tout de même contenir des problèmes d’accessibilité (<a href="https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/">Building the most inaccessible site possible with a perfect Lighthouse score</a>)</li>
         <li>Cette analyse devra être complétée par une expertise humaine</li>
       </ul>
     </div>
@@ -38,7 +38,7 @@
       <button type="button" class="disclosure-trigger">Afficher la synthèse sous forme de tableau</button>
       <div class="table disclosure-container">
       <table>
-        <caption>Synthèse du nombre d'erreur axe-core par site</caption>
+        <caption>Synthèse du nombre d’erreur axe-core par site</caption>
         <thead>
           <tr>
             <th scope="col">Date</th>
@@ -52,7 +52,7 @@
             <tr>
               <th scope="row"><%= date %></th>
               <% for (const siteName in results) { %>
-                <% const siteErrors = (dateResults[date] && dateResults[date][siteName]) ? dateResults[date][siteName] : 0; %>
+                <% const siteErrors = (dateResults[date] && dateResults[date][siteName]) ? dateResults[date][siteName]&nbsp; 0; %>
                 <td><%= siteErrors %></td>
               <% } %>
             </tr>
@@ -83,7 +83,7 @@
             <% } else { %>
               <span aria-hidden="true">❌</span>
             <% } %>
-            <span id="analysis-<%= siteIndex %>-<%= analysisIndex %>">Date de l'analyse :
+            <span id="analysis-<%= siteIndex %>-<%= analysisIndex %>">Date de l’analyse&nbsp;
             <%= analysis.analysisDate %></span> -
             <%= totalErrors %> erreurs <button type="button" class="disclosure-trigger" aria-describedby="site-<%= siteIndex %> analysis-<%= siteIndex %>-<%= analysisIndex %>">Afficher les résultats</button></h3>
           <div class="disclosure-container">
@@ -95,28 +95,28 @@
                 <% } else { %>
                   <span aria-hidden="true">❌</span>
                 <% } %>
-                <span id="url-<%= siteIndex %>-<%= analysisIndex %>-<%= urlIndex %>">URL :
+                <span id="url-<%= siteIndex %>-<%= analysisIndex %>-<%= urlIndex %>">URL&nbsp;
                 <%= url.url %></span> - <%= url.totalViolations %> erreurs <% if (url.totalViolations != 0) { %><button type="button" class="disclosure-trigger" aria-describedby="site-<%= siteIndex %> analysis-<%= siteIndex %>-<%= analysisIndex %> url-<%= siteIndex %>-<%= analysisIndex %>-<%= urlIndex %>">Afficher les résultats</button><% } %></h4>
               <% urlIndex++; %>
               <div class="disclosure-container">
                 <ul>
                   <% for (const violation of url.results) { %>
                   <li>
-                    <strong>Description :</strong>
+                    <strong>Description&nbsp;</strong>
                     <%= violation.description %>
                     <ul>
-                      <li><strong>Impact :</strong>
+                      <li><strong>Impact&nbsp;</strong>
                         <%= violation.impact %>
                       </li>
-                      <li><strong>Règle :</strong>
+                      <li><strong>Règle&nbsp;</strong>
                         <%= violation.id %>
                       </li>
-                      <li><strong>Tags :</strong>
+                      <li><strong>Tags&nbsp;</strong>
                         <%= violation.tags.join(', ') %>
                       </li>
                       <% if (violation.nodes && violation.nodes.length > 0) { %>
                       <li>
-                        <strong>Élément HTML concerné :</strong>
+                        <strong>Élément HTML concerné&nbsp;</strong>
                         <ul>
                           <% for (const node of violation.nodes) { %>
                           <li>
@@ -138,7 +138,7 @@
         </div>
       <% } %>
       <p>
-        Nombre total d'erreurs pour le site : <%= totalSiteErrors %>.
+        Nombre total d’erreurs pour le site&nbsp; <%= totalSiteErrors %>.
       </p>
       </div>
       <% siteIndex++; %>
