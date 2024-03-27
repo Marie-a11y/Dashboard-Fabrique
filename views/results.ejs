@@ -52,7 +52,7 @@
             <tr>
               <th scope="row"><%= date %></th>
               <% for (const siteName in results) { %>
-                <% const siteErrors = (dateResults[date] && dateResults[date][siteName]) ? dateResults[date][siteName]&nbsp; 0; %>
+                <% const siteErrors = (dateResults[date] && dateResults[date][siteName]) ? dateResults[date][siteName] : 0; %>
                 <td><%= siteErrors %></td>
               <% } %>
             </tr>
