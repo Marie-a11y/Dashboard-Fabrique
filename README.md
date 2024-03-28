@@ -25,4 +25,4 @@ Demonstration : [https://dashboard-a11y.alwaysdata.net/](https://dashboard-a11y.
 4. To launch the analysis, go to `http://localhost:3000/test` (make sure the server is launched first, see step 3).
 
 ## Licence
-To be defined.
+[Mozilla Public License Version 2.0](https://gitlab.com/temesis/dashboard-a11y/-/raw/main/LICENSE)
