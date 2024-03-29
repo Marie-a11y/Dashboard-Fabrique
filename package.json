@@ -2,6 +2,7 @@
   "name": "dashboard-accessibilite",
   "version": "1.0.0",
   "description": "Dashboard d'accessibilité basé sur axe-core",
+  "author": "Olivier Keul (https://www.temesis.com/)",
   "main": "server.js",
   "dependencies": {
     "axe-core": "^4.2.2",
