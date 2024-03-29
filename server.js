@@ -150,6 +150,8 @@ app.get('/', async (req, res) => {
               groupedResults[result.siteName].push(analysis);
             }
           });
+          // Trier les analyses pour chaque site par date en ordre décroissant
+          groupedResults[result.siteName].sort((a, b) => new Date(b.analysisDate) - new Date(a.analysisDate));
         });
 
         // Regrouper les résultats par date

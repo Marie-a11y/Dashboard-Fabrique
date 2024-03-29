@@ -46,9 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
   /* HIGHCHART */
   /*************/
 
-  // Récupérer le titre du graphique à partir de l'élément <caption> du tableau
-  const chartTitle = document.querySelector('caption').textContent;
-
   // Récupérer les données du tableau HTML
   const tableRows = document.querySelectorAll('tbody tr');
   const data = [];
@@ -81,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
       type: 'line'
     },
     title: {
-      text: chartTitle // Utiliser le titre récupéré
+      text: undefined
     },
     xAxis: {
       categories: dates // Utiliser les dates récupérées

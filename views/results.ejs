@@ -9,145 +9,162 @@
 </head>
 
 <body>
-  <header role="banner">
-    <div class="wrapper">
-      <h1 class="title"><span lang="en">Dashboard</span> accessibilité - Démonstration</h1>
-    </div>
+  <header role="banner" class="header">
+    <h1 class="title-1">
+      <span lang="en">Dashboard</span> accessibilité<br />
+      <span class="regular">Démonstration</span>
+    </h1>
   </header>
-  <main role="main" class="wrapper">
-    <div class="warning">
-      <h2>Objectifs</h2>
-      <ul>
-        <li>Monitorer, par site, les tests automatisés d'accessibilité (<a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a>) sur un échantillon de pages en s’appuyant sur le moteur <a href="https://github.com/dequelabs/axe-core">axe-core</a>
-        <li>Suivre une tendance par site</li>
-        <li>Analyser les erreurs, par site et par URL</li>
-        <li>Mettre en place des actions correctives</li>
-      </ul>
-      <h2>Limitations</h2>
-      <ul>
-        <li>Cet outil n’a pas vocation à indiquer un taux de conformité</li>
-        <li>Cet outil ne permet pas de tester les pages qui sont derrière une authentification ou un accès restreint</li>
-        <li>Une page peut avoir 0 erreur et tout de même contenir des problèmes d’accessibilité (<a href="https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/">Building the most inaccessible site possible with a perfect Lighthouse score</a>)</li>
-        <li>Cette analyse devra être complétée par une expertise humaine</li>
-      </ul>
-    </div>
-    <% if (!Object.keys(results).length) { %>
-      <p class="noresults">Aucun résultat disponible pour le moment. Le dossier "results" est vide.</p>
-    <% } else { %>
-      <div id="container" aria-hidden="true"></div>
-      <button type="button" class="disclosure-trigger">Afficher la synthèse sous forme de tableau</button>
-      <div class="table disclosure-container">
-      <table>
-        <caption>Synthèse du nombre d’erreur axe-core par site</caption>
-        <thead>
-          <tr>
-            <th scope="col">Date</th>
-            <% for (const siteName in results) { %>
-              <th scope="col"><%= siteName %></th>
-            <% } %>
-          </tr>
-        </thead>
-        <tbody>
-          <% allDates.forEach(date => { %>
-            <tr>
-              <th scope="row"><%= date %></th>
-              <% for (const siteName in results) { %>
-                <% const siteErrors = (dateResults[date] && dateResults[date][siteName]) ? dateResults[date][siteName] : 0; %>
-                <td><%= siteErrors %></td>
-              <% } %>
-            </tr>
-          <% }); %>
-        </tbody>
-      </table>
+  <main role="main">
+    <div class="section section--obj">
+      <div class="wrapper">
+        <h2 class="title-2">Objectifs</h2>
+        <ul>
+          <li>
+            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="sprite.svg#monitor"></use></svg></div>
+            <span>Monitorer</span> les tests automatisés d’accessibilité
+          </li>
+          <li>
+            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="sprite.svg#tendance"></use></svg></div>
+            <span>Suivre</span> une tendance par site</li>
+          <li>
+            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="sprite.svg#analyser"></use></svg></div>
+            <span>Analyser</span> les erreurs, par site et par URL
+          </li>
+          <li>
+            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="sprite.svg#correctives"></use></svg></div>
+            <span>Mettre en place</span> des actions correctives
+          </li>
+        </ul>
       </div>
-    <% } %>
-    <% let siteIndex = 0; %>
-    <% let analysisIndex = 0; %>
-    <% let urlIndex = 0; %>
-    <% for (const siteName in results) { %>
-    <div class="site">
-      <h2 id="site-<%= siteIndex %>">Site: <%= siteName %></h2>
-      <% let totalSiteErrors = 0; %>
-      <div class="analysis">
-      <% for (const analysis of results[siteName]) { %>
-        <div>
-          <% let totalErrors = 0; %>
-          <% for (const url of analysis.urls) { %>
-          <% totalErrors += url.totalViolations; %>
-          <% } %>
-          <% totalSiteErrors += totalErrors; %>
-          <% analysisIndex++; %>
-          <h3>
-            <% if (totalErrors === 0) { %>
-              <span aria-hidden="true">✅</span>
-            <% } else { %>
-              <span aria-hidden="true">❌</span>
-            <% } %>
-            <span id="analysis-<%= siteIndex %>-<%= analysisIndex %>">Date de l’analyse&nbsp;
-            <%= analysis.analysisDate %></span> -
-            <%= totalErrors %> erreurs <button type="button" class="disclosure-trigger" aria-describedby="site-<%= siteIndex %> analysis-<%= siteIndex %>-<%= analysisIndex %>">Afficher les résultats</button></h3>
-          <div class="disclosure-container">
-            <% for (const url of analysis.urls) { %>
+    </div>
+    <div class="section section--lim">
+      <div class="wrapper">
+        <h2 class="title-2">Limitations</h2>
+        <div class="list">
+          <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="sprite.svg#limitations"></use></svg></div>
+          <ul>
+            <li>Cet outil n’a pas vocation à indiquer un taux de conformité</li>
+            <li>Cet outil ne permet pas de tester les pages qui sont derrière une authentification ou un accès restreint</li>
+            <li>Une page peut avoir 0 erreur et tout de même contenir des problèmes d’accessibilité (<a href="https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/" lang="en">Building the most inaccessible site possible with a perfect Lighthouse score</a>)</li>
+            <li>Cette analyse devra être complétée par une expertise humaine</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="wrapper">
+        <% if (!Object.keys(results).length) { %>
+          <p class="noresults">Aucun résultat disponible pour le moment. Le dossier "results" est vide.</p>
+        <% } else { %>
+          <h2 class="title-2">Synthèse du nombre d’erreur axe-core par site</h2>
+          <div id="container" class="chart" aria-hidden="true"></div>
+          <button type="button" class="disclosure-trigger">Afficher la synthèse sous forme de tableau</button>
+          <div class="table disclosure-container">
+          <table>
+            <caption class="sr-only">Synthèse du nombre d’erreur axe-core par site</caption>
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <% for (const siteName in results) { %>
+                  <th scope="col"><%= siteName %></th>
+                <% } %>
+              </tr>
+            </thead>
+            <tbody>
+              <% allDates.forEach(date => { %>
+                <tr>
+                  <th scope="row"><%= date %></th>
+                  <% for (const siteName in results) { %>
+                    <% const siteErrors = (dateResults[date] && dateResults[date][siteName]) ? dateResults[date][siteName] : 0; %>
+                    <td><%= siteErrors %></td>
+                  <% } %>
+                </tr>
+              <% }); %>
+            </tbody>
+          </table>
+          </div>
+        <% } %>
+        <h2 class="title-2">Détails des résultats</h2>
+        <% let siteIndex = 0; %>
+        <% let analysisIndex = 0; %>
+        <% let urlIndex = 0; %>
+        <% for (const siteName in results) { %>
+        <div class="site">
+          <h3 id="site-<%= siteIndex %>">Site&nbsp;: <%= siteName %></h3>
+          <div class="analysis">
+          <% for (const analysis of results[siteName]) { %>
             <div>
+              <% let totalErrors = 0; %>
+              <% for (const url of analysis.urls) { %>
+              <% totalErrors += url.totalViolations; %>
+              <% } %>
+              <% analysisIndex++; %>
               <h4>
-                <% if (url.totalViolations === 0) { %>
+                <% if (totalErrors === 0) { %>
                   <span aria-hidden="true">✅</span>
                 <% } else { %>
                   <span aria-hidden="true">❌</span>
                 <% } %>
-                <span id="url-<%= siteIndex %>-<%= analysisIndex %>-<%= urlIndex %>">URL&nbsp;
-                <%= url.url %></span> - <%= url.totalViolations %> erreurs <% if (url.totalViolations != 0) { %><button type="button" class="disclosure-trigger" aria-describedby="site-<%= siteIndex %> analysis-<%= siteIndex %>-<%= analysisIndex %> url-<%= siteIndex %>-<%= analysisIndex %>-<%= urlIndex %>">Afficher les résultats</button><% } %></h4>
-              <% urlIndex++; %>
-              <div class="disclosure-container">
-                <ul>
-                  <% for (const violation of url.results) { %>
-                  <li>
-                    <strong>Description&nbsp;</strong>
-                    <%= violation.description %>
+                <span id="analysis-<%= siteIndex %>-<%= analysisIndex %>">Date de l’analyse&nbsp;:
+                <%= analysis.analysisDate %></span> -
+                <%= totalErrors %> erreurs <button type="button" class="disclosure-trigger" aria-describedby="site-<%= siteIndex %> analysis-<%= siteIndex %>-<%= analysisIndex %>">Afficher les résultats</button></h4>
+              <ul class="disclosure-container">
+                <% for (const url of analysis.urls) { %>
+                <li>
+                  <% if (url.totalViolations === 0) { %>
+                    <span aria-hidden="true">✅</span>
+                  <% } else { %>
+                    <span aria-hidden="true">❌</span>
+                  <% } %>
+                  <span id="url-<%= siteIndex %>-<%= analysisIndex %>-<%= urlIndex %>">URL&nbsp;:
+                  <a href="<%= url.url %>"><%= url.url %></a></span> - <%= url.totalViolations %> erreurs <% if (url.totalViolations != 0) { %><button type="button" class="disclosure-trigger" aria-describedby="site-<%= siteIndex %> analysis-<%= siteIndex %>-<%= analysisIndex %> url-<%= siteIndex %>-<%= analysisIndex %>-<%= urlIndex %>">Afficher les résultats</button><% } %>
+                  <% urlIndex++; %>
+                  <div class="disclosure-container">
                     <ul>
-                      <li><strong>Impact&nbsp;</strong>
-                        <%= violation.impact %>
-                      </li>
-                      <li><strong>Règle&nbsp;</strong>
-                        <%= violation.id %>
-                      </li>
-                      <li><strong>Tags&nbsp;</strong>
-                        <%= violation.tags.join(', ') %>
-                      </li>
-                      <% if (violation.nodes && violation.nodes.length > 0) { %>
+                      <% for (const violation of url.results) { %>
                       <li>
-                        <strong>Élément HTML concerné&nbsp;</strong>
+                        <strong>Description&nbsp;:</strong>
+                        <%= violation.description %>
                         <ul>
-                          <% for (const node of violation.nodes) { %>
+                          <li><strong>Tags&nbsp;:</strong>
+                            <%= violation.tags.join(', ') %>
+                          </li>
+                          <% if (violation.nodes && violation.nodes.length > 0) { %>
                           <li>
-                            <code>
-                              <%= node.html %></code>
+                            <strong>Élément HTML concerné&nbsp;</strong>
+                            <ul>
+                              <% for (const node of violation.nodes) { %>
+                              <li>
+                                <code>
+                                  <%= node.html %></code>
+                              </li>
+                              <% } %>
+                            </ul>
                           </li>
                           <% } %>
                         </ul>
                       </li>
                       <% } %>
                     </ul>
-                  </li>
-                  <% } %>
-                </ul>
-              </div>
+                  </div>
+                </li>
+                <% } %>
+              </ul>
             </div>
-            <% } %>
+          <% } %>
           </div>
+          <% siteIndex++; %>
         </div>
-      <% } %>
-      <p>
-        Nombre total d’erreurs pour le site&nbsp; <%= totalSiteErrors %>.
-      </p>
+        <% } %>
       </div>
-      <% siteIndex++; %>
     </div>
-    <% } %>
   </main>
-  <footer role="contentinfo">
+  <footer role="contentinfo" class="footer">
     <div class="wrapper">
-      <p>Fait avec amour par <a href="https://www.temesis.com/">Temesis</a>.</p>
+      <p>Cet outil lance des tests automatisés d’accessibilité (<a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a>) sur un échantillon de pages en s’appuyant sur le moteur <a href="https://github.com/dequelabs/axe-core">axe-core</a>.
+      <p><a href="https://gitlab.com/temesis/dashboard-a11y" lang="en">Gitlab dashboard-a11y</a>&nbsp;|&nbsp;<a href="https://gitlab.com/temesis/dashboard-a11y/-/raw/main/LICENSE">Mozilla Public License Version 2.0</a></p>
+      <p>Fait avec <span aria-hidden="true">🤍</span><span class="sr-only">amour</span> par <a href="https://www.temesis.com/">Temesis</a>.</p>
     </div>
   </footer>
   <script src="/highcharts.js"></script>
