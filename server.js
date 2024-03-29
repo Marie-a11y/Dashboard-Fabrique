@@ -65,7 +65,7 @@ async function fetchHTMLContent(url) {
         const page = await browser.newPage();
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
         await page.goto(url, {
-          waitUntil: 'domcontentloaded' // Attendre que le DOM soit chargé
+          waitUntil: 'networkidle0' // navigation is finished when there are no more than 0 network connections for at least 500 ms
         });
         const htmlContent = await page.content();
         console.log(`Contenu HTML récupéré de l'URL : ${url}`);
