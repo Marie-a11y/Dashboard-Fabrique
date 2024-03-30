@@ -18,11 +18,26 @@ Demonstration : [https://dashboard-a11y.alwaysdata.net/](https://dashboard-a11y.
 
 ## How it works
 1. Fill in the `urls.json` file with the following information: 
+    - language (french and english available): `lang`
     - site name: `siteName`
     - URLs: `siteUrls`
 2. Install nodes modules: `npm i`
 3. To start displaying the dashboard: `npm run build`. The dashboard will be visible at `http://localhost:3000/` 
 4. To launch the analysis, go to `http://localhost:3000/test` (make sure the server is launched first, see step 3).
+
+## Static files
+The public folder has the following structure:
+- css/
+    - styles.css
+- js/
+    - highcharts.js
+    - main.js
+- img/
+    - logo.svg
+    - sprite.svg
+- i18n/
+    - en.json
+    - fr.json
 
 ## Licence
 [Mozilla Public License Version 2.0](https://gitlab.com/temesis/dashboard-a11y/-/raw/main/LICENSE)
