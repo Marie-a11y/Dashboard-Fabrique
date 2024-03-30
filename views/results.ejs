@@ -1,53 +1,54 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<%= langData.i18n.lang %>">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard accessibilité - Démonstration</title>
-  <link rel="stylesheet" href="/style.min.css">
+  <title><%= langData.i18n.title %> - <%= langData.i18n.customer %></title>
+  <link rel="stylesheet" href="/css/style.min.css">
 </head>
 
 <body>
   <header role="banner" class="header">
     <h1 class="title-1">
-      <span lang="en">Dashboard</span> accessibilité<br />
-      <span class="regular">Démonstration</span>
+      <%- (langData.i18n.h1) %><br />
+      <span class="regular"><%= langData.i18n.customer %></span>
     </h1>
   </header>
   <main role="main">
     <div class="section section--obj">
       <div class="wrapper">
-        <h2 class="title-2">Objectifs</h2>
+        <h2 class="title-2"><%= langData.i18n.objectives %></h2>
         <ul>
           <li>
-            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="sprite.svg#monitor"></use></svg></div>
-            <span>Monitorer</span> les tests automatisés d’accessibilité
+            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="/img/sprite.svg#monitor"></use></svg></div>
+            <%- (langData.i18n.objectives01) %>
           </li>
           <li>
-            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="sprite.svg#tendance"></use></svg></div>
-            <span>Suivre</span> une tendance par site</li>
-          <li>
-            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="sprite.svg#analyser"></use></svg></div>
-            <span>Analyser</span> les erreurs, par site et par URL
+            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="/img/sprite.svg#tendance"></use></svg></div>
+            <%- (langData.i18n.objectives02) %>
           </li>
           <li>
-            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="sprite.svg#correctives"></use></svg></div>
-            <span>Mettre en place</span> des actions correctives
+            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="/img/sprite.svg#analyser"></use></svg></div>
+            <%- (langData.i18n.objectives03) %>
+          </li>
+          <li>
+            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="/img/sprite.svg#correctives"></use></svg></div>
+            <%- (langData.i18n.objectives04) %>
           </li>
         </ul>
       </div>
     </div>
     <div class="section section--lim">
       <div class="wrapper">
-        <h2 class="title-2">Limitations</h2>
+        <h2 class="title-2"><%= langData.i18n.limits %></h2>
         <div class="list">
-          <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="sprite.svg#limitations"></use></svg></div>
+          <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="/img/sprite.svg#limitations"></use></svg></div>
           <ul>
-            <li>Cet outil n’a pas vocation à indiquer un taux de conformité</li>
-            <li>Cet outil ne permet pas de tester les pages qui sont derrière une authentification ou un accès restreint</li>
-            <li>Une page peut avoir 0 erreur et tout de même contenir des problèmes d’accessibilité (<a href="https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/" lang="en">Building the most inaccessible site possible with a perfect Lighthouse score</a>)</li>
-            <li>Cette analyse devra être complétée par une expertise humaine</li>
+            <li><%= langData.i18n.limits01 %></li>
+            <li><%= langData.i18n.limits02 %></li>
+            <li><%= langData.i18n.limits03 %> (<a href="https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/" lang="en">Building the most inaccessible site possible with a perfect Lighthouse score</a>)</li>
+            <li><%= langData.i18n.limits04 %></li>
           </ul>
         </div>
       </div>
@@ -55,14 +56,14 @@
     <div class="section">
       <div class="wrapper">
         <% if (!Object.keys(results).length) { %>
-          <p class="noresults">Aucun résultat disponible pour le moment. Le dossier "results" est vide.</p>
+          <p class="noresults"><%= langData.i18n.noResult %></p>
         <% } else { %>
-          <h2 class="title-2">Synthèse du nombre d’erreur axe-core par site</h2>
-          <div id="container" class="chart" aria-hidden="true"></div>
-          <button type="button" class="disclosure-trigger">Afficher la synthèse sous forme de tableau</button>
+          <h2 class="title-2"><%= langData.i18n.summary %></h2>
+          <div id="container" class="chart" data-yAxisTitle="<%= langData.i18n.yAxisTitle %>" aria-hidden="true"></div>
+          <button type="button" class="disclosure-trigger"><%= langData.i18n.buttonSummary %></button>
           <div class="table disclosure-container">
           <table>
-            <caption class="sr-only">Synthèse du nombre d’erreur axe-core par site</caption>
+            <caption class="sr-only"><%= langData.i18n.summary %></caption>
             <thead>
               <tr>
                 <th scope="col">Date</th>
@@ -85,7 +86,7 @@
           </table>
           </div>
         <% } %>
-        <h2 class="title-2">Détails des résultats</h2>
+        <h2 class="title-2"><%= langData.i18n.details %></h2>
         <% let siteIndex = 0; %>
         <% let analysisIndex = 0; %>
         <% let urlIndex = 0; %>
@@ -106,9 +107,9 @@
                 <% } else { %>
                   <span aria-hidden="true">❌</span>
                 <% } %>
-                <span id="analysis-<%= siteIndex %>-<%= analysisIndex %>">Date de l’analyse&nbsp;:
+                <span id="analysis-<%= siteIndex %>-<%= analysisIndex %>"><%= langData.i18n.analysisDate %>&nbsp;:
                 <%= analysis.analysisDate %></span> -
-                <%= totalErrors %> erreurs <button type="button" class="disclosure-trigger" aria-describedby="site-<%= siteIndex %> analysis-<%= siteIndex %>-<%= analysisIndex %>">Afficher les résultats</button></h4>
+                <%= totalErrors %> <%= langData.i18n.site %> <button type="button" class="disclosure-trigger" aria-describedby="site-<%= siteIndex %> analysis-<%= siteIndex %>-<%= analysisIndex %>"><%= langData.i18n.showResults %></button></h4>
               <ul class="disclosure-container">
                 <% for (const url of analysis.urls) { %>
                 <li>
@@ -118,21 +119,21 @@
                     <span aria-hidden="true">❌</span>
                   <% } %>
                   <span id="url-<%= siteIndex %>-<%= analysisIndex %>-<%= urlIndex %>">URL&nbsp;:
-                  <a href="<%= url.url %>"><%= url.url %></a></span> - <%= url.totalViolations %> erreurs <% if (url.totalViolations != 0) { %><button type="button" class="disclosure-trigger" aria-describedby="site-<%= siteIndex %> analysis-<%= siteIndex %>-<%= analysisIndex %> url-<%= siteIndex %>-<%= analysisIndex %>-<%= urlIndex %>">Afficher les résultats</button><% } %>
+                  <a href="<%= url.url %>"><%= url.url %></a></span> - <%= url.totalViolations %> <%= langData.i18n.errors %> <% if (url.totalViolations != 0) { %><button type="button" class="disclosure-trigger" aria-describedby="site-<%= siteIndex %> analysis-<%= siteIndex %>-<%= analysisIndex %> url-<%= siteIndex %>-<%= analysisIndex %>-<%= urlIndex %>"><%= langData.i18n.showResults %></button><% } %>
                   <% urlIndex++; %>
                   <div class="disclosure-container">
                     <ul>
                       <% for (const violation of url.results) { %>
                       <li>
                         <strong>Description&nbsp;:</strong>
-                        <%= violation.description %>
+                        <%= translateRule(violation.id) %>
                         <ul>
                           <li><strong>Tags&nbsp;:</strong>
                             <%= violation.tags.join(', ') %>
                           </li>
                           <% if (violation.nodes && violation.nodes.length > 0) { %>
                           <li>
-                            <strong>Élément HTML concerné&nbsp;</strong>
+                            <strong><%= langData.i18n.elements %>&nbsp;</strong>
                             <ul>
                               <% for (const node of violation.nodes) { %>
                               <li>
@@ -162,13 +163,13 @@
   </main>
   <footer role="contentinfo" class="footer">
     <div class="wrapper">
-      <p>Cet outil lance des tests automatisés d’accessibilité (<a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a>) sur un échantillon de pages en s’appuyant sur le moteur <a href="https://github.com/dequelabs/axe-core">axe-core</a>.
+      <p><%= langData.i18n.footer01part01 %> (<a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a>) <%= langData.i18n.footer01part02 %> <a href="https://github.com/dequelabs/axe-core">axe-core</a>.
       <p><a href="https://gitlab.com/temesis/dashboard-a11y" lang="en">Gitlab dashboard-a11y</a>&nbsp;|&nbsp;<a href="https://gitlab.com/temesis/dashboard-a11y/-/raw/main/LICENSE">Mozilla Public License Version 2.0</a></p>
-      <p>Fait avec <span aria-hidden="true">🤍</span><span class="sr-only">amour</span> par <a href="https://www.temesis.com/">Temesis</a>.</p>
+      <p><%= langData.i18n.footer02 %> <span aria-hidden="true">🤍</span><span class="sr-only"><%= langData.i18n.footer03 %></span> <%= langData.i18n.footer04 %> <a href="https://www.temesis.com/">Temesis</a>.</p>
     </div>
   </footer>
-  <script src="/highcharts.js"></script>
-  <script src="/script.min.js"></script>
+  <script src="/js/highcharts.js"></script>
+  <script src="/js/script.min.js"></script>
 </body>
 
 </html>

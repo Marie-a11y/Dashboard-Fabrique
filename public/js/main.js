@@ -1,15 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
+  
 
   /**************/
   /* DISCLOSURE */
   /**************/
 
-  // Sélectionner tous les éléments avec la classe "disclosure-container"
+  // Select all elements with the "disclosure-container" class
   const disclosureContainers = document.querySelectorAll('.disclosure-container');
 
-  // Parcourir les éléments sélectionnés
+  // Browse selected items
   disclosureContainers.forEach(container => {
-    // Ajouter l'attribut aria-hidden="true" à chaque élément
+    // Add the aria-hidden="true" attribute to each element
     container.setAttribute('aria-hidden', 'true');
   });
 
@@ -20,42 +21,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
       let container = button.nextElementSibling;
       
-      // Vérifier si le bouton est dans un parent
+      // Check if the button is in a parent
       if (container === null) {
         parent = button.parentElement;
         container = parent.nextElementSibling;
       } 
 
-      // Vérifier si le bouton est actuellement "ouvert" ou "fermé"
+      // Check whether the button is currently "open" or "closed"
       const isExpanded = this.getAttribute('aria-expanded') === 'true';
 
-      // Inverser la valeur de aria-expanded
+      // Invert the value of aria-expanded
       this.setAttribute('aria-expanded', !isExpanded);
 
-      // Si le bouton est "ouvert", révéler le div.error-list en supprimant l'attribut aria-hidden
+      // If the button is "open", reveal the div.error-list by removing the aria-hidden attribute
       if (!isExpanded) {
         container.removeAttribute('aria-hidden');
       } else {
-        // Si le bouton est "fermé", masquer le div.error-list en ajoutant l'attribut aria-hidden
+        // If the button is "closed", hide the div.error-list by adding the aria-hidden attribute
         container.setAttribute('aria-hidden', 'true');
       }
     });
   });
 
+
   /*************/
   /* HIGHCHART */
   /*************/
 
-  // Récupérer les données du tableau HTML
+  // Fetching data from the HTML table
   const tableRows = document.querySelectorAll('tbody tr');
   const data = [];
-  const dates = []; // Nouveau tableau pour stocker les dates
+  const dates = []; // New table for storing dates
 
   tableRows.forEach((row, rowIndex) => {
     const rowData = [];
     const dateCell = row.querySelector('th');
     if (dateCell) {
-      dates.push(dateCell.textContent); // Ajouter la date au tableau des dates
+      dates.push(dateCell.textContent); // Add date to date table
     }
     row.querySelectorAll('td').forEach((cell, cellIndex) => {
       rowData.push(parseInt(cell.textContent));
@@ -63,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     data.push(rowData);
   });
 
-  // Récupérer les noms des séries à partir de la première ligne d'en-têtes
+  // Fetch series names from the first line of headers
   const headerRow = document.querySelector('thead tr');
   const seriesNames = [];
   headerRow.querySelectorAll('th').forEach((cell, index) => {
@@ -72,20 +74,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Générer le graphique avec Highcharts.js
+  // Generate the chart with Highcharts.js
   Highcharts.chart('container', {
     chart: {
       type: 'line'
     },
     title: {
-      text: undefined
+      text: null
     },
     xAxis: {
-      categories: dates // Utiliser les dates récupérées
+      categories: dates // Use retrieved dates
     },
     yAxis: {
       title: {
-        text: 'Erreurs axe-core'
+        text: document.getElementById('container').getAttribute('data-yAxisTitle')
       }
     },
     series: seriesNames.map((name, index) => ({

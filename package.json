@@ -1,11 +1,11 @@
 {
   "name": "dashboard-accessibilite",
   "version": "1.0.0",
-  "description": "Dashboard d'accessibilité basé sur axe-core",
+  "description": "Axe-core-based accessibility dashboard",
   "author": "Olivier Keul (https://www.temesis.com/)",
   "main": "server.js",
   "dependencies": {
-    "axe-core": "^4.2.2",
+    "axe-core": "^4.9.0",
     "canvas": "^2.11.2",
     "cssnano": "^6.1.0",
     "ejs": "^3.1.9",
@@ -18,7 +18,7 @@
   "scripts": {
     "build": "npm run minify-js && npm run minify-css && npm start",
     "start": "node server.js",
-    "minify-js": "uglifyjs ./public/main.js -o ./public/script.min.js",
-    "minify-css": "postcss ./public/styles.css -o ./public/style.min.css"
+    "minify-js": "uglifyjs ./public/js/main.js -o ./public/js/script.min.js",
+    "minify-css": "postcss ./public/css/styles.css -o ./public/css/style.min.css"
   }
 }

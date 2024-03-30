@@ -8,30 +8,40 @@ const fs = require('fs');
 const path = require('path');
 const minify = require('html-minifier').minify;
 
+// Load language data according to the language specified in urls.json
+const langData = require(`./public/i18n/${urls.lang}.json`);
+
+// Add a middleware for serving static files
 app.use(express.static('public'));
 
-// Obtenez la date actuelle au format ISO (YYYY-MM-DD)
+// Get the current date in ISO format (YYYY-MM-DD)
 const currentUTCDate = new Date();
 const currentISODate = new Date(currentUTCDate.getTime() - (currentUTCDate.getTimezoneOffset() * 60000)).toISOString().split('T')[0];
 
-// Vérifiez si le dossier 'results' existe, sinon créez-le
+// Check if the 'results' folder exists, if not create it
 if (!fs.existsSync(path.join(__dirname, 'results'))) {
     fs.mkdirSync(path.join(__dirname, 'results'));
 }
 
-// Fonction pour écrire les résultats dans un fichier
-function writeResultsToFile(results) {
-    const date = new Date();
-    const month = ('0' + (date.getMonth() + 1)).slice(-2); // Ajoute un zéro devant le mois si nécessaire
-    const day = ('0' + date.getDate()).slice(-2); // Ajoute un zéro devant le jour si nécessaire
-    const dateString = `${date.getFullYear()}-${month}-${day}`;
-    const filePath = path.join(__dirname, 'results', `${dateString}.json`);
-    fs.writeFileSync(filePath, JSON.stringify(results, null, 2)); // Ajoute 2 espaces d'indentation
+// Function to obtain the translation of a rule
+function translateRule(ruleId) {
+    return langData.rules[ruleId] ? langData.rules[ruleId].description : 'Rule description not available.';
 }
 
+// Function for writing results to a file
+function writeResultsToFile(results) {
+    const date = new Date();
+    const month = ('0' + (date.getMonth() + 1)).slice(-2); // Add a zero in front of the month if necessary
+    const day = ('0' + date.getDate()).slice(-2); // Add a zero in front of the day if necessary
+    const dateString = `${date.getFullYear()}-${month}-${day}`;
+    const filePath = path.join(__dirname, 'results', `${dateString}.json`);
+    fs.writeFileSync(filePath, JSON.stringify(results, null, 2)); // Adds 2 indent spaces
+}
+
+// Run axe-core tests
 async function runAxeCoreTests(page, url, analysisDate) {
     try {
-        console.log(`Exécution des tests axe-core sur l'URL : ${url}`);
+        console.log(`Run axe-core tests on the URL: ${url}`);
         await page.addScriptTag({ path: require.resolve('axe-core') });
         const results = await page.evaluate(() => {
             return axe.run(document, {
@@ -41,22 +51,24 @@ async function runAxeCoreTests(page, url, analysisDate) {
                 }
             });
         });
-        console.log(`Tests axe-core exécutés sur l'URL : ${url}`);
+        console.log(`Axe-core tests performed on the URL: ${url}`);
         const violations = results.violations.map(violation => {
             return { ...violation, analysisDate };
         });
-        console.log(`Nombre d'erreurs sur l'URL ${url} : ${violations.length}`);
+        console.log(`Number of URL errors ${url}: ${violations.length}`);
         return violations;
     } catch (error) {
-        console.error('Erreur lors de l\'exécution des tests axe-core :', error);
+        console.error('Axe-core test execution error:', error);
         throw error;
     }
 }
 
+// Fetch HTML content
 async function fetchHTMLContent(url) {
     try {
-        console.log(`Récupération du contenu HTML de l'URL : ${url}`);
+        console.log(`Fetch HTML content from URL: ${url}`);
         const browser = await puppeteer.launch({ 
+            // Running without a sandbox is strongly discouraged. Consider configuring a sandbox instead
             args: [
                 '--no-sandbox', 
                 '--disable-setuid-sandbox'
@@ -65,23 +77,23 @@ async function fetchHTMLContent(url) {
         const page = await browser.newPage();
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
         await page.goto(url, {
-          waitUntil: 'networkidle0' // navigation is finished when there are no more than 0 network connections for at least 500 ms
+          waitUntil: 'networkidle0' // Navigation is finished when there are no more than 0 network connections for at least 500 ms
         });
         const htmlContent = await page.content();
-        console.log(`Contenu HTML récupéré de l'URL : ${url}`);
+        console.log(`HTML content fetched from URL: ${url}`);
         return { htmlContent, page, browser, analysisDate: currentISODate };
     } catch (error) {
-        console.error(`Erreur lors de la récupération du contenu HTML de l'URL ${url}:`, error);
+        console.error(`Error when fetching HTML content from URL ${url}:`, error);
         throw error;
     }
 }
 
-// Endpoint pour lancer les tests axe-core
+// Endpoint to launch axe-core tests
 app.get('/test', async (req, res) => {
     try {
         const axeResultsList = [];
 
-        for (const site of urls) {
+        for (const site of urls.sites) {
             const { siteName, siteUrls } = site;
             const siteObj = { siteName, analyses: [] }; // Un tableau pour stocker les analyses
 
@@ -104,20 +116,20 @@ app.get('/test', async (req, res) => {
             }
         }
 
-        // Écrire les résultats dans un fichier
+        // Write results to file
         writeResultsToFile(axeResultsList); 
 
-        res.send("L'analyse a été lancée. Veuillez vérifier les résultats sur http://localhost:3000/");
+        res.send(`The analysis has been launched. Please check the results on http://localhost:${port}`);
     } catch (error) {
-        console.error('Erreur lors du test axe-core :', error);
-        res.status(500).json({ error: 'Une erreur s\'est produite lors du test axe-core.' });
+        console.error('Axe-core test error:', error);
+        res.status(500).json({ error: 'An error occurred during the axe-core test.' });
     }
 });
 
-// Endpoint pour afficher les résultats sur une page web
+// Endpoint to display results on a web page
 app.get('/', async (req, res) => {
     try {
-        // Lire les résultats
+        // Read the results
         const resultsDir = path.join(__dirname, 'results');
         let allResults = [];
         let allDates = [];
@@ -136,7 +148,7 @@ app.get('/', async (req, res) => {
             });
         });
 
-        // Regrouper les analyses par site
+        // Group analyses by site
         const groupedResults = {};
         allResults.forEach(result => {
           if (!groupedResults[result.siteName]) {
@@ -150,11 +162,11 @@ app.get('/', async (req, res) => {
               groupedResults[result.siteName].push(analysis);
             }
           });
-          // Trier les analyses pour chaque site par date en ordre décroissant
+          // Sort analyses for each site by date in descending order
           groupedResults[result.siteName].sort((a, b) => new Date(b.analysisDate) - new Date(a.analysisDate));
         });
 
-        // Regrouper les résultats par date
+        // Group results by date
         const dateResults = {};
         allResults.forEach(site => {
             site.analyses.forEach(analysis => {
@@ -173,10 +185,16 @@ app.get('/', async (req, res) => {
                 }
             });
         });
-
-        // Rendre le modèle EJS avec les résultats
-        const html = await ejs.renderFile('./views/results.ejs', { results: groupedResults, dateResults: dateResults, allDates: allDates });
-        // Minfification HTML
+        
+        // Render EJS model with results and language data
+        const html = await ejs.renderFile('./views/results.ejs', { 
+            results: groupedResults, 
+            dateResults: dateResults, 
+            allDates: allDates,
+            langData: langData,
+            translateRule: translateRule
+        });
+        // HTML minimization
         const minifiedHtml = minify(html, {
             removeAttributeQuotes: true,
             collapseWhitespace: true,
@@ -185,11 +203,11 @@ app.get('/', async (req, res) => {
         res.send(minifiedHtml);
 
     } catch (error) {
-        console.error('Erreur lors de l\'affichage des résultats :', error);
-        res.status(500).json({ error: 'Une erreur s\'est produite lors de l\'affichage des résultats.' });
+        console.error('Error while displaying results:', error);
+        res.status(500).json({ error: 'An error occurred while displaying the results.' });
     }
 });
 
 app.listen(port, () => {
-    console.log(`Le serveur est lancé sur http://localhost:${port}`);
+    console.log(`The server is started at http://localhost:${port}`);
 });

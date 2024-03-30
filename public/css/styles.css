@@ -36,7 +36,7 @@ a, button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(logo.svg);
+  background-image: url(../img/logo.svg);
   background-position: center;
   background-size: 26rem;
 }
@@ -60,7 +60,7 @@ a, button {
   margin-bottom: .5rem;
 }
 
-/* UTIL */
+/* UTILS */
 .sr-only {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px); 

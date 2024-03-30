@@ -1,0 +1,1923 @@
+[
+  {
+    "siteName": "Service-Public.fr",
+    "analyses": [
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 0,
+        "urls": [
+          {
+            "url": "https://www.service-public.fr/",
+            "results": [],
+            "totalViolations": 0
+          }
+        ]
+      },
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 0,
+        "urls": [
+          {
+            "url": "https://www.service-public.fr/P10017",
+            "results": [],
+            "totalViolations": 0
+          }
+        ]
+      },
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 0,
+        "urls": [
+          {
+            "url": "https://www.service-public.fr/particuliers/actualites/A14434",
+            "results": [],
+            "totalViolations": 0
+          }
+        ]
+      },
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 0,
+        "urls": [
+          {
+            "url": "https://www.service-public.fr/particuliers/vosdroits/F12242",
+            "results": [],
+            "totalViolations": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "siteName": "impots.gouv.fr",
+    "analyses": [
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 1,
+        "urls": [
+          {
+            "url": "https://www.impots.gouv.fr/accueil",
+            "results": [
+              {
+                "id": "listitem",
+                "impact": "serious",
+                "tags": [
+                  "cat.structure",
+                  "wcag2a",
+                  "wcag131",
+                  "EN-301-549",
+                  "EN-9.1.3.1"
+                ],
+                "description": "Ensures <li> elements are used semantically",
+                "help": "<li> elements must be contained in a <ul> or <ol>",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/listitem?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>",
+                    "target": [
+                      ".menu--header > li:nth-child(1)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  },
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>",
+                    "target": [
+                      ".menu--header > li:nth-child(2)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  },
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>",
+                    "target": [
+                      ".menu--header > li:nth-child(3)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              }
+            ],
+            "totalViolations": 1
+          }
+        ]
+      },
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 1,
+        "urls": [
+          {
+            "url": "https://www.impots.gouv.fr/contacts",
+            "results": [
+              {
+                "id": "listitem",
+                "impact": "serious",
+                "tags": [
+                  "cat.structure",
+                  "wcag2a",
+                  "wcag131",
+                  "EN-301-549",
+                  "EN-9.1.3.1"
+                ],
+                "description": "Ensures <li> elements are used semantically",
+                "help": "<li> elements must be contained in a <ul> or <ol>",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/listitem?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>",
+                    "target": [
+                      ".menu--header > li:nth-child(1)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  },
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>",
+                    "target": [
+                      ".menu--header > li:nth-child(2)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  },
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>",
+                    "target": [
+                      ".menu--header > li:nth-child(3)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  },
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>\n                  <a href=\"/\" title=\"Accueil\">Accueil</a>\n              </li>",
+                    "target": [
+                      "ol > li:nth-child(1)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  },
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li class=\"active\">\n                  <span>Contact</span>\n              </li>",
+                    "target": [
+                      ".active"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              }
+            ],
+            "totalViolations": 1
+          }
+        ]
+      },
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 2,
+        "urls": [
+          {
+            "url": "https://www.impots.gouv.fr/actualite/transfert-la-dgfip-du-recouvrement-de-laccise-sur-les-tabacs-et-les-alcools-depuis-le-1er",
+            "results": [
+              {
+                "id": "link-in-text-block",
+                "impact": "serious",
+                "tags": [
+                  "cat.color",
+                  "wcag2a",
+                  "wcag141",
+                  "TTv5",
+                  "TT13.a",
+                  "EN-301-549",
+                  "EN-9.1.4.1"
+                ],
+                "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+                "help": "Links must be distinguishable without relying on color",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/link-in-text-block?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "link-in-text-block",
+                        "data": {
+                          "messageKey": "fgContrast",
+                          "contrastRatio": 1.47,
+                          "requiredContrastRatio": 3,
+                          "nodeColor": "#0000ff",
+                          "parentColor": "#333333"
+                        },
+                        "relatedNodes": [
+                          {
+                            "html": "<p>",
+                            "target": [
+                              "p:nth-child(6)"
+                            ]
+                          }
+                        ],
+                        "impact": "serious",
+                        "message": "The link has insufficient color contrast of 1.47:1 with the surrounding text. (Minimum contrast is 3:1, link text: #0000ff, surrounding text: #333333)"
+                      },
+                      {
+                        "id": "link-in-text-block-style",
+                        "data": null,
+                        "relatedNodes": [
+                          {
+                            "html": "<p>",
+                            "target": [
+                              "p:nth-child(6)"
+                            ]
+                          }
+                        ],
+                        "impact": "serious",
+                        "message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<a href=\"https://www.douane.gouv.fr/actualites/contributions-indirectes-sur-les-alcools-et-les-tabacs-comment-declarer-et-payer-en-2024\" target=\"_blank\" title=\"Nouvelle fenêtre\">Contributions indirectes sur les alcools et tabacs&nbsp;: comment déclarer et payer en 2024 ?</a>",
+                    "target": [
+                      "a[title=\"Nouvelle fenêtre\"]"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 1.47:1 with the surrounding text. (Minimum contrast is 3:1, link text: #0000ff, surrounding text: #333333)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              },
+              {
+                "id": "listitem",
+                "impact": "serious",
+                "tags": [
+                  "cat.structure",
+                  "wcag2a",
+                  "wcag131",
+                  "EN-301-549",
+                  "EN-9.1.3.1"
+                ],
+                "description": "Ensures <li> elements are used semantically",
+                "help": "<li> elements must be contained in a <ul> or <ol>",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/listitem?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>",
+                    "target": [
+                      ".menu--header > li:nth-child(1)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  },
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>",
+                    "target": [
+                      ".menu--header > li:nth-child(2)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  },
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>",
+                    "target": [
+                      ".menu--header > li:nth-child(3)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  },
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>\n                  <a href=\"/\" title=\"Accueil\">Accueil</a>\n              </li>",
+                    "target": [
+                      "ol > li:nth-child(1)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  },
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>\n                  <a href=\"/toutes-les-actualites\" title=\"Toutes les actualités\">Toutes les actualités</a>\n              </li>",
+                    "target": [
+                      "ol > li:nth-child(2)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  },
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li class=\"active\">\n                  <span>Transfert à la DGFiP du recouvrement de l’accise sur les tabacs et les alcools depuis le 1er janvier 2024</span>\n              </li>",
+                    "target": [
+                      ".active"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              }
+            ],
+            "totalViolations": 2
+          }
+        ]
+      },
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 1,
+        "urls": [
+          {
+            "url": "https://www.impots.gouv.fr/particulier/declarer-mes-revenus",
+            "results": [
+              {
+                "id": "listitem",
+                "impact": "serious",
+                "tags": [
+                  "cat.structure",
+                  "wcag2a",
+                  "wcag131",
+                  "EN-301-549",
+                  "EN-9.1.3.1"
+                ],
+                "description": "Ensures <li> elements are used semantically",
+                "help": "<li> elements must be contained in a <ul> or <ol>",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/listitem?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>",
+                    "target": [
+                      ".menu--header > li:nth-child(1)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  },
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>",
+                    "target": [
+                      ".menu--header > li:nth-child(2)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  },
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>",
+                    "target": [
+                      ".menu--header > li:nth-child(3)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  },
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>\n                  <a href=\"/\" title=\"Accueil\">Accueil</a>\n              </li>",
+                    "target": [
+                      "ol > li:nth-child(1)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  },
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li>\n                  <a href=\"/particulier\" title=\"Particulier\">Particulier</a>\n              </li>",
+                    "target": [
+                      "ol > li:nth-child(2)"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  },
+                  {
+                    "any": [
+                      {
+                        "id": "listitem",
+                        "data": {
+                          "messageKey": "roleNotValid"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "List item parent element has a role that is not role=\"list\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<li class=\"active\">\n                  <span>Déclarer mes revenus</span>\n              </li>",
+                    "target": [
+                      "ol > .active"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              }
+            ],
+            "totalViolations": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "siteName": "Leboncoin",
+    "analyses": [
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 2,
+        "urls": [
+          {
+            "url": "https://www.leboncoin.fr/",
+            "results": [
+              {
+                "id": "frame-title",
+                "impact": "serious",
+                "tags": [
+                  "cat.text-alternatives",
+                  "wcag2a",
+                  "wcag412",
+                  "section508",
+                  "section508.22.i",
+                  "TTv5",
+                  "TT12.d",
+                  "EN-301-549",
+                  "EN-9.4.1.2"
+                ],
+                "description": "Ensures <iframe> and <frame> elements have an accessible name",
+                "help": "Frames must have an accessible name",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-title?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "non-empty-title",
+                        "data": {
+                          "messageKey": "noAttr"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no title attribute"
+                      },
+                      {
+                        "id": "aria-label",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-label attribute does not exist or is empty"
+                      },
+                      {
+                        "id": "aria-labelledby",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+                      },
+                      {
+                        "id": "presentational-role",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<iframe src=\"https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAgeaplGomVzkAWgPuxA%3D%3D&amp;hash=05B30BD9055986BD2EE8F5A199D973&amp;cid=VSfAgy~crrJGPJRLr0jrsfDtvskBB52_6qDSWhczCtnLEVnVY5uKduUv63bWMdjeVw9mcmaBjCsZv68Mh~EPV8vWwoK7o2PLcPxBynbR2FauGG~A9HxBNqRVhd3gG4S7&amp;t=bv&amp;referer=https%3A%2F%2Fwww.leboncoin.fr%2F&amp;s=2089&amp;e=20f21bf4145ddad17781a5b6aaf72eb5e3fe7af7552a430ec0b5e35f334591fb\" width=\"100%\" height=\"100%\" style=\"height:100vh;\" frameborder=\"0\" border=\"0\" scrolling=\"yes\">",
+                    "target": [
+                      "iframe"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element has no title attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              },
+              {
+                "id": "html-has-lang",
+                "impact": "serious",
+                "tags": [
+                  "cat.language",
+                  "wcag2a",
+                  "wcag311",
+                  "TTv5",
+                  "TT11.a",
+                  "EN-301-549",
+                  "EN-9.3.1.1",
+                  "ACT"
+                ],
+                "description": "Ensures every HTML document has a lang attribute",
+                "help": "<html> element must have a lang attribute",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/html-has-lang?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "has-lang",
+                        "data": {
+                          "messageKey": "noLang"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "The <html> element does not have a lang attribute"
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<html>",
+                    "target": [
+                      "html"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              }
+            ],
+            "totalViolations": 2
+          }
+        ]
+      },
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 2,
+        "urls": [
+          {
+            "url": "https://www.leboncoin.fr/_immobilier_/offres",
+            "results": [
+              {
+                "id": "frame-title",
+                "impact": "serious",
+                "tags": [
+                  "cat.text-alternatives",
+                  "wcag2a",
+                  "wcag412",
+                  "section508",
+                  "section508.22.i",
+                  "TTv5",
+                  "TT12.d",
+                  "EN-301-549",
+                  "EN-9.4.1.2"
+                ],
+                "description": "Ensures <iframe> and <frame> elements have an accessible name",
+                "help": "Frames must have an accessible name",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-title?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "non-empty-title",
+                        "data": {
+                          "messageKey": "noAttr"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no title attribute"
+                      },
+                      {
+                        "id": "aria-label",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-label attribute does not exist or is empty"
+                      },
+                      {
+                        "id": "aria-labelledby",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+                      },
+                      {
+                        "id": "presentational-role",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<iframe src=\"https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAw5Myqt-mPZQAWgPuxA%3D%3D&amp;hash=05B30BD9055986BD2EE8F5A199D973&amp;cid=6VHtlIF9KBKb2U~~hXNZIR3~XUW3BoCky0PtxmO7GI4L~MhtI_WvpyS3e~ezBSwXwFJCoE9Hr3tTwjG1qxB5SiSEm1yuuA2TzRr2mB1aB7q6mc8BuNs5ryhMW8yhf7Gp&amp;t=bv&amp;referer=https%3A%2F%2Fwww.leboncoin.fr%2F_immobilier_%2Foffres&amp;s=2089&amp;e=c09b02e284f43bfb9ac93eba2bdd8b0bc4117a580a64295979e658ce310e4c62\" width=\"100%\" height=\"100%\" style=\"height:100vh;\" frameborder=\"0\" border=\"0\" scrolling=\"yes\">",
+                    "target": [
+                      "iframe"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element has no title attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              },
+              {
+                "id": "html-has-lang",
+                "impact": "serious",
+                "tags": [
+                  "cat.language",
+                  "wcag2a",
+                  "wcag311",
+                  "TTv5",
+                  "TT11.a",
+                  "EN-301-549",
+                  "EN-9.3.1.1",
+                  "ACT"
+                ],
+                "description": "Ensures every HTML document has a lang attribute",
+                "help": "<html> element must have a lang attribute",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/html-has-lang?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "has-lang",
+                        "data": {
+                          "messageKey": "noLang"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "The <html> element does not have a lang attribute"
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<html>",
+                    "target": [
+                      "html"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              }
+            ],
+            "totalViolations": 2
+          }
+        ]
+      },
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 2,
+        "urls": [
+          {
+            "url": "https://www.leboncoin.fr/deposer-une-annonce",
+            "results": [
+              {
+                "id": "frame-title",
+                "impact": "serious",
+                "tags": [
+                  "cat.text-alternatives",
+                  "wcag2a",
+                  "wcag412",
+                  "section508",
+                  "section508.22.i",
+                  "TTv5",
+                  "TT12.d",
+                  "EN-301-549",
+                  "EN-9.4.1.2"
+                ],
+                "description": "Ensures <iframe> and <frame> elements have an accessible name",
+                "help": "Frames must have an accessible name",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-title?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "non-empty-title",
+                        "data": {
+                          "messageKey": "noAttr"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no title attribute"
+                      },
+                      {
+                        "id": "aria-label",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-label attribute does not exist or is empty"
+                      },
+                      {
+                        "id": "aria-labelledby",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+                      },
+                      {
+                        "id": "presentational-role",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<iframe src=\"https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAQ-gOhUB9HfUAWgPuxA%3D%3D&amp;hash=05B30BD9055986BD2EE8F5A199D973&amp;cid=0RJ7V9IndCg6O5G3Sh~U7RWHIZHYToGKUTXZkixcncD8Ng477CSs9eXPiS5CSdBFkwdCXutYhRVWb18wu9YZ7DCV0IQXp17Np9uwzB7O63g8JhXeNjhA~OK8dbLQBz~V&amp;t=bv&amp;referer=https%3A%2F%2Fwww.leboncoin.fr%2Fdeposer-une-annonce&amp;s=2089&amp;e=ace9b01528a17c9678fa614d9d7296d248e544290a2bc425ee8b613b1c2720f2\" width=\"100%\" height=\"100%\" style=\"height:100vh;\" frameborder=\"0\" border=\"0\" scrolling=\"yes\">",
+                    "target": [
+                      "iframe"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element has no title attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              },
+              {
+                "id": "html-has-lang",
+                "impact": "serious",
+                "tags": [
+                  "cat.language",
+                  "wcag2a",
+                  "wcag311",
+                  "TTv5",
+                  "TT11.a",
+                  "EN-301-549",
+                  "EN-9.3.1.1",
+                  "ACT"
+                ],
+                "description": "Ensures every HTML document has a lang attribute",
+                "help": "<html> element must have a lang attribute",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/html-has-lang?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "has-lang",
+                        "data": {
+                          "messageKey": "noLang"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "The <html> element does not have a lang attribute"
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<html>",
+                    "target": [
+                      "html"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              }
+            ],
+            "totalViolations": 2
+          }
+        ]
+      },
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 2,
+        "urls": [
+          {
+            "url": "https://www.leboncoin.fr/boutique/11532/postulez_aux_offres_d_emploi_leboncoin.htm",
+            "results": [
+              {
+                "id": "frame-title",
+                "impact": "serious",
+                "tags": [
+                  "cat.text-alternatives",
+                  "wcag2a",
+                  "wcag412",
+                  "section508",
+                  "section508.22.i",
+                  "TTv5",
+                  "TT12.d",
+                  "EN-301-549",
+                  "EN-9.4.1.2"
+                ],
+                "description": "Ensures <iframe> and <frame> elements have an accessible name",
+                "help": "Frames must have an accessible name",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-title?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "non-empty-title",
+                        "data": {
+                          "messageKey": "noAttr"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no title attribute"
+                      },
+                      {
+                        "id": "aria-label",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-label attribute does not exist or is empty"
+                      },
+                      {
+                        "id": "aria-labelledby",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+                      },
+                      {
+                        "id": "presentational-role",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<iframe src=\"https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAKsJFH3cQWx4AWgPuxA%3D%3D&amp;hash=05B30BD9055986BD2EE8F5A199D973&amp;cid=naigGXMmRfs0oTLkqOIGgwzpfqhYDTDjRWj5CcEG3YnZClb0XkF9chNgRrDa7PL6yqurxuQ9Ke3JH2BH9SR4t0n9x_3SgAEaDPfIvxwiTYWPCvTK7ibAr8AVG_l1ctwE&amp;t=bv&amp;referer=https%3A%2F%2Fwww.leboncoin.fr%2Fboutique%2F11532%2Fpostulez_aux_offres_d_emploi_leboncoin.htm&amp;s=2089&amp;e=31a1e29fa6bb1293eb9d4c86f9a6e0dd019a6ec74a7ed7f49107d272a420467a\" width=\"100%\" height=\"100%\" style=\"height:100vh;\" frameborder=\"0\" border=\"0\" scrolling=\"yes\">",
+                    "target": [
+                      "iframe"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element has no title attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              },
+              {
+                "id": "html-has-lang",
+                "impact": "serious",
+                "tags": [
+                  "cat.language",
+                  "wcag2a",
+                  "wcag311",
+                  "TTv5",
+                  "TT11.a",
+                  "EN-301-549",
+                  "EN-9.3.1.1",
+                  "ACT"
+                ],
+                "description": "Ensures every HTML document has a lang attribute",
+                "help": "<html> element must have a lang attribute",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/html-has-lang?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "has-lang",
+                        "data": {
+                          "messageKey": "noLang"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "The <html> element does not have a lang attribute"
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<html>",
+                    "target": [
+                      "html"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              }
+            ],
+            "totalViolations": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "siteName": "SNCF Connect",
+    "analyses": [
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 2,
+        "urls": [
+          {
+            "url": "https://www.sncf-connect.com/",
+            "results": [
+              {
+                "id": "frame-title",
+                "impact": "serious",
+                "tags": [
+                  "cat.text-alternatives",
+                  "wcag2a",
+                  "wcag412",
+                  "section508",
+                  "section508.22.i",
+                  "TTv5",
+                  "TT12.d",
+                  "EN-301-549",
+                  "EN-9.4.1.2"
+                ],
+                "description": "Ensures <iframe> and <frame> elements have an accessible name",
+                "help": "Frames must have an accessible name",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-title?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "non-empty-title",
+                        "data": {
+                          "messageKey": "noAttr"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no title attribute"
+                      },
+                      {
+                        "id": "aria-label",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-label attribute does not exist or is empty"
+                      },
+                      {
+                        "id": "aria-labelledby",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+                      },
+                      {
+                        "id": "presentational-role",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<iframe src=\"https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMABvjR8XWe_l0AWgPuxA%3D%3D&amp;hash=746B7C2640FFCBD6D2BEC599D9FB5F&amp;cid=Km3VZtNi9xT895do4S9Io9cXSkbYd22fq9gkuGjlcKouxqXw1pBBtnvg0Jl8jzgJk3y6ZPwLtO1yWh8S3rXmBMzZzp~jCawp3~KGX357w0P0BpAJWFNV8znpP62QNIMs&amp;t=fe&amp;referer=https%3A%2F%2Fwww.sncf-connect.com%2F&amp;s=36834&amp;e=42da30ce00a52a3dd4e98852425712cc0f6ced33492ade3d0a43d238845651f6\" width=\"100%\" height=\"100%\" style=\"height:100vh;\" frameborder=\"0\" border=\"0\" scrolling=\"yes\">",
+                    "target": [
+                      "iframe"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element has no title attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              },
+              {
+                "id": "html-has-lang",
+                "impact": "serious",
+                "tags": [
+                  "cat.language",
+                  "wcag2a",
+                  "wcag311",
+                  "TTv5",
+                  "TT11.a",
+                  "EN-301-549",
+                  "EN-9.3.1.1",
+                  "ACT"
+                ],
+                "description": "Ensures every HTML document has a lang attribute",
+                "help": "<html> element must have a lang attribute",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/html-has-lang?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "has-lang",
+                        "data": {
+                          "messageKey": "noLang"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "The <html> element does not have a lang attribute"
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<html>",
+                    "target": [
+                      "html"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              }
+            ],
+            "totalViolations": 2
+          }
+        ]
+      },
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 0,
+        "urls": [
+          {
+            "url": "https://www.sncf-connect.com/aide/contact",
+            "results": [],
+            "totalViolations": 0
+          }
+        ]
+      },
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 2,
+        "urls": [
+          {
+            "url": "https://www.sncf-connect.com/app/catalogue",
+            "results": [
+              {
+                "id": "frame-title",
+                "impact": "serious",
+                "tags": [
+                  "cat.text-alternatives",
+                  "wcag2a",
+                  "wcag412",
+                  "section508",
+                  "section508.22.i",
+                  "TTv5",
+                  "TT12.d",
+                  "EN-301-549",
+                  "EN-9.4.1.2"
+                ],
+                "description": "Ensures <iframe> and <frame> elements have an accessible name",
+                "help": "Frames must have an accessible name",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-title?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "non-empty-title",
+                        "data": {
+                          "messageKey": "noAttr"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no title attribute"
+                      },
+                      {
+                        "id": "aria-label",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-label attribute does not exist or is empty"
+                      },
+                      {
+                        "id": "aria-labelledby",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+                      },
+                      {
+                        "id": "presentational-role",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<iframe src=\"https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAjlRDW4AebLgAWgPuxA%3D%3D&amp;hash=746B7C2640FFCBD6D2BEC599D9FB5F&amp;cid=JtZ_S70qp8J9FSsH38DRYF6Wd9_z9u6lJIxmVnapiDGuHR1GomGxAD5S7EsN7zfqfi3V2M1OMw_memraeP9mtKnC8Vr3S0XMkdQBtpbto0e7APjbLDId092YHYChPwts&amp;t=fe&amp;referer=https%3A%2F%2Fwww.sncf-connect.com%2Fapp%2Fcatalogue&amp;s=36834&amp;e=4e709b848ab8defaf1b6d43ac4d99da561b82ef2ef971bc36d6b20ab8d3fea07\" width=\"100%\" height=\"100%\" style=\"height:100vh;\" frameborder=\"0\" border=\"0\" scrolling=\"yes\">",
+                    "target": [
+                      "iframe"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element has no title attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              },
+              {
+                "id": "html-has-lang",
+                "impact": "serious",
+                "tags": [
+                  "cat.language",
+                  "wcag2a",
+                  "wcag311",
+                  "TTv5",
+                  "TT11.a",
+                  "EN-301-549",
+                  "EN-9.3.1.1",
+                  "ACT"
+                ],
+                "description": "Ensures every HTML document has a lang attribute",
+                "help": "<html> element must have a lang attribute",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/html-has-lang?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "has-lang",
+                        "data": {
+                          "messageKey": "noLang"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "The <html> element does not have a lang attribute"
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<html>",
+                    "target": [
+                      "html"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              }
+            ],
+            "totalViolations": 2
+          }
+        ]
+      },
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 2,
+        "urls": [
+          {
+            "url": "https://www.sncf-connect.com/app/trips",
+            "results": [
+              {
+                "id": "frame-title",
+                "impact": "serious",
+                "tags": [
+                  "cat.text-alternatives",
+                  "wcag2a",
+                  "wcag412",
+                  "section508",
+                  "section508.22.i",
+                  "TTv5",
+                  "TT12.d",
+                  "EN-301-549",
+                  "EN-9.4.1.2"
+                ],
+                "description": "Ensures <iframe> and <frame> elements have an accessible name",
+                "help": "Frames must have an accessible name",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-title?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "non-empty-title",
+                        "data": {
+                          "messageKey": "noAttr"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element has no title attribute"
+                      },
+                      {
+                        "id": "aria-label",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-label attribute does not exist or is empty"
+                      },
+                      {
+                        "id": "aria-labelledby",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+                      },
+                      {
+                        "id": "presentational-role",
+                        "data": null,
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<iframe src=\"https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAMWXoLITpa3QAWgPuxA%3D%3D&amp;hash=746B7C2640FFCBD6D2BEC599D9FB5F&amp;cid=DIAPVPC7V6eEG4DDnmtnrYD0Kb1QG6ku1pxAKlXdS6owkadWZhY2RxF5Citd~p9MAfUWV4VwHRUuOyJn55YeQcfDCyuVB64xMNdg~9HiNY4MY34oT~CFXS3_745TKmL~&amp;t=fe&amp;referer=https%3A%2F%2Fwww.sncf-connect.com%2Fapp%2Ftrips&amp;s=36834&amp;e=a1cd294e4636d2ec1b9c085a149258a161aaca17832e1d89a0f9b0228e641861\" width=\"100%\" height=\"100%\" style=\"height:100vh;\" frameborder=\"0\" border=\"0\" scrolling=\"yes\">",
+                    "target": [
+                      "iframe"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element has no title attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              },
+              {
+                "id": "html-has-lang",
+                "impact": "serious",
+                "tags": [
+                  "cat.language",
+                  "wcag2a",
+                  "wcag311",
+                  "TTv5",
+                  "TT11.a",
+                  "EN-301-549",
+                  "EN-9.3.1.1",
+                  "ACT"
+                ],
+                "description": "Ensures every HTML document has a lang attribute",
+                "help": "<html> element must have a lang attribute",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/html-has-lang?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "has-lang",
+                        "data": {
+                          "messageKey": "noLang"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "The <html> element does not have a lang attribute"
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<html>",
+                    "target": [
+                      "html"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              }
+            ],
+            "totalViolations": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "siteName": "Doctolib",
+    "analyses": [
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 2,
+        "urls": [
+          {
+            "url": "https://www.doctolib.fr/",
+            "results": [
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "tags": [
+                  "cat.color",
+                  "wcag2aa",
+                  "wcag143",
+                  "TTv5",
+                  "TT13.c",
+                  "EN-301-549",
+                  "EN-9.1.4.3",
+                  "ACT"
+                ],
+                "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "color-contrast",
+                        "data": {
+                          "fgColor": "#0596de",
+                          "bgColor": "#e7f6fb",
+                          "contrastRatio": 2.95,
+                          "fontSize": "19.5pt (26px)",
+                          "fontWeight": "normal",
+                          "messageKey": null,
+                          "expectedContrastRatio": "3:1"
+                        },
+                        "relatedNodes": [
+                          {
+                            "html": "<body>",
+                            "target": [
+                              "body"
+                            ]
+                          }
+                        ],
+                        "impact": "serious",
+                        "message": "Element has insufficient color contrast of 2.95 (foreground color: #0596de, background color: #e7f6fb, font size: 19.5pt (26px), font weight: normal). Expected contrast ratio of 3:1"
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<h1>Doctolib n'est pas compatible avec votre navigateur web.</h1>",
+                    "target": [
+                      ".lang-fr > h1"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.95 (foreground color: #0596de, background color: #e7f6fb, font size: 19.5pt (26px), font weight: normal). Expected contrast ratio of 3:1"
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              },
+              {
+                "id": "html-has-lang",
+                "impact": "serious",
+                "tags": [
+                  "cat.language",
+                  "wcag2a",
+                  "wcag311",
+                  "TTv5",
+                  "TT11.a",
+                  "EN-301-549",
+                  "EN-9.3.1.1",
+                  "ACT"
+                ],
+                "description": "Ensures every HTML document has a lang attribute",
+                "help": "<html> element must have a lang attribute",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/html-has-lang?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "has-lang",
+                        "data": {
+                          "messageKey": "noLang"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "The <html> element does not have a lang attribute"
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<html>",
+                    "target": [
+                      "html"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              }
+            ],
+            "totalViolations": 2
+          }
+        ]
+      },
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 2,
+        "urls": [
+          {
+            "url": "https://www.doctolib.fr/sante/trouversonpsy/",
+            "results": [
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "tags": [
+                  "cat.color",
+                  "wcag2aa",
+                  "wcag143",
+                  "TTv5",
+                  "TT13.c",
+                  "EN-301-549",
+                  "EN-9.1.4.3",
+                  "ACT"
+                ],
+                "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "color-contrast",
+                        "data": {
+                          "fgColor": "#0596de",
+                          "bgColor": "#e7f6fb",
+                          "contrastRatio": 2.95,
+                          "fontSize": "19.5pt (26px)",
+                          "fontWeight": "normal",
+                          "messageKey": null,
+                          "expectedContrastRatio": "3:1"
+                        },
+                        "relatedNodes": [
+                          {
+                            "html": "<body>",
+                            "target": [
+                              "body"
+                            ]
+                          }
+                        ],
+                        "impact": "serious",
+                        "message": "Element has insufficient color contrast of 2.95 (foreground color: #0596de, background color: #e7f6fb, font size: 19.5pt (26px), font weight: normal). Expected contrast ratio of 3:1"
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<h1>Doctolib n'est pas compatible avec votre navigateur web.</h1>",
+                    "target": [
+                      ".lang-fr > h1"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.95 (foreground color: #0596de, background color: #e7f6fb, font size: 19.5pt (26px), font weight: normal). Expected contrast ratio of 3:1"
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              },
+              {
+                "id": "html-has-lang",
+                "impact": "serious",
+                "tags": [
+                  "cat.language",
+                  "wcag2a",
+                  "wcag311",
+                  "TTv5",
+                  "TT11.a",
+                  "EN-301-549",
+                  "EN-9.3.1.1",
+                  "ACT"
+                ],
+                "description": "Ensures every HTML document has a lang attribute",
+                "help": "<html> element must have a lang attribute",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/html-has-lang?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "has-lang",
+                        "data": {
+                          "messageKey": "noLang"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "The <html> element does not have a lang attribute"
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<html>",
+                    "target": [
+                      "html"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              }
+            ],
+            "totalViolations": 2
+          }
+        ]
+      },
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 2,
+        "urls": [
+          {
+            "url": "https://www.doctolib.fr/sante/confidentialite/",
+            "results": [
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "tags": [
+                  "cat.color",
+                  "wcag2aa",
+                  "wcag143",
+                  "TTv5",
+                  "TT13.c",
+                  "EN-301-549",
+                  "EN-9.1.4.3",
+                  "ACT"
+                ],
+                "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "color-contrast",
+                        "data": {
+                          "fgColor": "#0596de",
+                          "bgColor": "#e7f6fb",
+                          "contrastRatio": 2.95,
+                          "fontSize": "19.5pt (26px)",
+                          "fontWeight": "normal",
+                          "messageKey": null,
+                          "expectedContrastRatio": "3:1"
+                        },
+                        "relatedNodes": [
+                          {
+                            "html": "<body>",
+                            "target": [
+                              "body"
+                            ]
+                          }
+                        ],
+                        "impact": "serious",
+                        "message": "Element has insufficient color contrast of 2.95 (foreground color: #0596de, background color: #e7f6fb, font size: 19.5pt (26px), font weight: normal). Expected contrast ratio of 3:1"
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<h1>Doctolib n'est pas compatible avec votre navigateur web.</h1>",
+                    "target": [
+                      ".lang-fr > h1"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.95 (foreground color: #0596de, background color: #e7f6fb, font size: 19.5pt (26px), font weight: normal). Expected contrast ratio of 3:1"
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              },
+              {
+                "id": "html-has-lang",
+                "impact": "serious",
+                "tags": [
+                  "cat.language",
+                  "wcag2a",
+                  "wcag311",
+                  "TTv5",
+                  "TT11.a",
+                  "EN-301-549",
+                  "EN-9.3.1.1",
+                  "ACT"
+                ],
+                "description": "Ensures every HTML document has a lang attribute",
+                "help": "<html> element must have a lang attribute",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/html-has-lang?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "has-lang",
+                        "data": {
+                          "messageKey": "noLang"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "The <html> element does not have a lang attribute"
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<html>",
+                    "target": [
+                      "html"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              }
+            ],
+            "totalViolations": 2
+          }
+        ]
+      },
+      {
+        "analysisDate": "2024-03-30",
+        "totalViolations": 2,
+        "urls": [
+          {
+            "url": "https://www.doctolib.fr/sante/consultation-video/",
+            "results": [
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "tags": [
+                  "cat.color",
+                  "wcag2aa",
+                  "wcag143",
+                  "TTv5",
+                  "TT13.c",
+                  "EN-301-549",
+                  "EN-9.1.4.3",
+                  "ACT"
+                ],
+                "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/color-contrast?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "color-contrast",
+                        "data": {
+                          "fgColor": "#0596de",
+                          "bgColor": "#e7f6fb",
+                          "contrastRatio": 2.95,
+                          "fontSize": "19.5pt (26px)",
+                          "fontWeight": "normal",
+                          "messageKey": null,
+                          "expectedContrastRatio": "3:1"
+                        },
+                        "relatedNodes": [
+                          {
+                            "html": "<body>",
+                            "target": [
+                              "body"
+                            ]
+                          }
+                        ],
+                        "impact": "serious",
+                        "message": "Element has insufficient color contrast of 2.95 (foreground color: #0596de, background color: #e7f6fb, font size: 19.5pt (26px), font weight: normal). Expected contrast ratio of 3:1"
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<h1>Doctolib n'est pas compatible avec votre navigateur web.</h1>",
+                    "target": [
+                      ".lang-fr > h1"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.95 (foreground color: #0596de, background color: #e7f6fb, font size: 19.5pt (26px), font weight: normal). Expected contrast ratio of 3:1"
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              },
+              {
+                "id": "html-has-lang",
+                "impact": "serious",
+                "tags": [
+                  "cat.language",
+                  "wcag2a",
+                  "wcag311",
+                  "TTv5",
+                  "TT11.a",
+                  "EN-301-549",
+                  "EN-9.3.1.1",
+                  "ACT"
+                ],
+                "description": "Ensures every HTML document has a lang attribute",
+                "help": "<html> element must have a lang attribute",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/html-has-lang?application=axeAPI",
+                "nodes": [
+                  {
+                    "any": [
+                      {
+                        "id": "has-lang",
+                        "data": {
+                          "messageKey": "noLang"
+                        },
+                        "relatedNodes": [],
+                        "impact": "serious",
+                        "message": "The <html> element does not have a lang attribute"
+                      }
+                    ],
+                    "all": [],
+                    "none": [],
+                    "impact": "serious",
+                    "html": "<html>",
+                    "target": [
+                      "html"
+                    ],
+                    "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+                  }
+                ],
+                "analysisDate": "2024-03-30"
+              }
+            ],
+            "totalViolations": 2
+          }
+        ]
+      }
+    ]
+  }
+]

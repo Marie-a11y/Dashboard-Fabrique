@@ -1,113 +1,50 @@
-[
-    {
-        "siteName": "Temesis",
-        "siteUrls": [
-            "https://www.temesis.com/",
-            "https://www.temesis.com/equipe/",
-            "https://www.temesis.com/expertises/",
-            "https://www.temesis.com/formation/",
-            "https://www.temesis.com/contact/",
-            "https://www.temesis.com/mentions-legales/",
-            "https://www.temesis.com/declaration-accessibilite/",
-            "https://www.temesis.com/declaration-ecoconception/",
-            "https://www.temesis.com/plan-du-site/",
-            "https://www.temesis.com/references/",
-            "https://www.temesis.com/expertises/accessibilite/",
-            "https://www.temesis.com/expertises/accessibilite/audit/",
-            "https://www.temesis.com/expertises/accessibilite/audit/audit-etat-des-lieux-rgaa-wcag/",
-            "https://www.temesis.com/expertises/accessibilite/accompagnement/",
-            "https://www.temesis.com/expertises/accessibilite/accompagnement/accompagnement-accessibilite/",
-            "https://www.temesis.com/expertises/accessibilite/formation/",
-            "https://www.temesis.com/expertises/accessibilite/formation/sensibilisation-accessibilite/",
-            "https://www.temesis.com/blog/",
-            "https://www.temesis.com/blog/synthese-des-nouvelles-reglementations-encadrant-laccessibilite-numerique-en-france/"
-        ]
-    },
-    {
-        "siteName": "Ctrl-a",
-        "siteUrls": [
-            "https://www.ctrla.fr/",
-            "https://www.ctrla.fr/pages/mentions-legales/",
-            "https://www.ctrla.fr/pages/declaration-accessibilite/",
-            "https://www.ctrla.fr/pages/ecoconception/",
-            "https://www.ctrla.fr/pages/plan-de-site/",
-            "https://www.ctrla.fr/pages/politique-de-confidentialite/",
-            "https://www.ctrla.fr/pages/communication/lancement-ctrl-a/"
-        ]
-    },
-    {
-        "siteName": "Numerik-ea",
-        "siteUrls": [
-            "https://www.numerik-ea.fr/",
-            "https://www.numerik-ea.fr/mentions-legales/",
-            "https://www.numerik-ea.fr/plan-du-site/",
-            "https://www.numerik-ea.fr/contact/",
-            "https://www.numerik-ea.fr/agence-digitale/",
-            "https://www.numerik-ea.fr/prestations/",
-            "https://www.numerik-ea.fr/accessibilite-numerique/",
-            "https://www.numerik-ea.fr/creation-et-refonte-de-sites-web/",
-            "https://www.numerik-ea.fr/gestion-de-contenus/",
-            "https://www.numerik-ea.fr/campagnes-newsletters-et-sms/",
-            "https://www.numerik-ea.fr/realisations/",
-            "https://www.numerik-ea.fr/politique-de-confidentialite/",
-            "https://www.numerik-ea.fr/declaration-accessibilite/"
-        ]
-    },
-    {
-        "siteName": "Ecedi",
-        "siteUrls": [
-            "https://www.ecedi.fr/",
-            "https://www.ecedi.fr/pages/confidentialite.php",
-            "https://www.ecedi.fr/pages/legal.php",
-            "https://www.ecedi.fr/pages/accessibilite.php",
-            "https://www.ecedi.fr/pages/ugap.php",
-            "https://www.ecedi.fr/pages/reference.php"
-        ]
-    },
-    {
-        "siteName": "Smart Agence",
-        "siteUrls": [
-            "https://www.smartagence.com/",
-            "https://www.smartagence.com/politique-de-confidentialite-et-gestion-des-cookies/",
-            "https://www.smartagence.com/mentions-legales/",
-            "https://www.smartagence.com/plan-du-site/",
-            "https://www.smartagence.com/contactez-nous/",
-            "https://www.smartagence.com/agence/",
-            "https://www.smartagence.com/agence/manifeste/",
-            "https://www.smartagence.com/agence/secteurs/mutuelles-assurances/",
-            "https://www.smartagence.com/agence/secteurs/secteur-public/",
-            "https://www.smartagence.com/agence/secteurs/formation-metiers/",
-            "https://www.smartagence.com/agence/secteurs/finance-asset-management/",
-            "https://www.smartagence.com/agence/secteurs/fondations-associations/",
-            "https://www.smartagence.com/approche/",
-            "https://www.smartagence.com/projets/",
-            "https://www.smartagence.com/projets/fondation-arc-strategie-et-dispositif-digital/",
-            "https://www.smartagence.com/projets/onf-refonte-du-site-amiral-et-des-sites-satellites/",
-            "https://www.smartagence.com/projets/edf-refonte-et-creation-de-modules-et-pages-au-sein-du-site-web/",
-            "https://www.smartagence.com/offres/",
-            "https://www.smartagence.com/regards/",
-            "https://www.smartagence.com/regards/smart-agence-acteur-incontournable-de-lexperience-utilisateur/",
-            "https://www.smartagence.com/regards/concevoir-un-design-system-pour-un-client-5-conseils-pour-prendre-un-bon-depart/",
-            "https://www.smartagence.com/nous-rejoindre/"
-        ]
-    },
-    {
-        "siteName": "Collectif Plus",
-        "siteUrls": [
-            "https://plus.ecedi.fr/",
-            "https://collectifplus.squarespace.com/mentions-legales-et-cookies",
-            "https://plus.ecedi.fr/contact",
-            "https://plus.ecedi.fr/new-cover-page",
-            "https://plus.ecedi.fr/membres",
-            "https://plus.ecedi.fr/les-membres-du-collectif/yan-paquis",
-            "https://plus.ecedi.fr/les-membres-du-collectif/sbastien-morin-a64ze-nrcxb",
-            "https://plus.ecedi.fr/discutons-en-plus",
-            "https://plus.ecedi.fr/formations",
-            "https://plus.ecedi.fr/webinars",
-            "https://plus.ecedi.fr/references",
-            "https://plus.ecedi.fr/les-references-du-collectif/linstitut-du-cerveau-et-de-la-moelle-pinire-icm",
-            "https://plus.ecedi.fr/les-references-du-collectif/r00nw8a1cnko5hyimurxfofvivptsx",
-            "https://plus.ecedi.fr/les-references-du-collectif/lonely-planet"
-        ]
-    }
-]
+{
+   "lang":"fr",
+   "sites":[
+      {
+         "siteName":"Service-Public.fr",
+         "siteUrls":[
+            "https://www.service-public.fr/",
+            "https://www.service-public.fr/P10017",
+            "https://www.service-public.fr/particuliers/actualites/A14434",
+            "https://www.service-public.fr/particuliers/vosdroits/F12242"
+         ]
+      },
+      {
+         "siteName":"impots.gouv.fr",
+         "siteUrls":[
+            "https://www.impots.gouv.fr/accueil",
+            "https://www.impots.gouv.fr/contacts",
+            "https://www.impots.gouv.fr/actualite/transfert-la-dgfip-du-recouvrement-de-laccise-sur-les-tabacs-et-les-alcools-depuis-le-1er",
+            "https://www.impots.gouv.fr/particulier/declarer-mes-revenus"
+         ]
+      },
+      {
+         "siteName":"Leboncoin",
+         "siteUrls":[
+            "https://www.leboncoin.fr/",
+            "https://www.leboncoin.fr/_immobilier_/offres",
+            "https://www.leboncoin.fr/deposer-une-annonce",
+            "https://www.leboncoin.fr/boutique/11532/postulez_aux_offres_d_emploi_leboncoin.htm"
+         ]
+      },
+      {
+         "siteName":"SNCF Connect",
+         "siteUrls":[
+            "https://www.sncf-connect.com/",
+            "https://www.sncf-connect.com/aide/contact",
+            "https://www.sncf-connect.com/app/catalogue",
+            "https://www.sncf-connect.com/app/trips"
+         ]
+      },
+      {
+         "siteName":"Doctolib",
+         "siteUrls":[
+            "https://www.doctolib.fr/",
+            "https://www.doctolib.fr/sante/trouversonpsy/",
+            "https://www.doctolib.fr/sante/confidentialite/",
+            "https://www.doctolib.fr/sante/consultation-video/"
+         ]
+      }
+   ]
+}
