@@ -36,15 +36,6 @@
             "https://www.sncf-connect.com/app/catalogue",
             "https://www.sncf-connect.com/app/trips"
          ]
-      },
-      {
-         "siteName":"Doctolib",
-         "siteUrls":[
-            "https://www.doctolib.fr/",
-            "https://www.doctolib.fr/sante/trouversonpsy/",
-            "https://www.doctolib.fr/sante/confidentialite/",
-            "https://www.doctolib.fr/sante/consultation-video/"
-         ]
       }
    ]
 }
