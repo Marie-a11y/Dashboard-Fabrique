@@ -27,7 +27,9 @@
     "footer01part02": "on a sample of pages using the following engine ",
     "footer02": "Made with",
     "footer03": "love",
-    "footer04": "by <a href=\"https://www.temesis.com/\">Temesis</a>, member of <a href=\"https://www.ctrla.fr/\">Ctrl-a</a> group, for a fair and useful digital."
+    "footer04": "by",
+    "footer05": ", member of",
+    "footer06": " group, for a fair and useful digital."
   },
   "rules": {
     "accesskeys": {

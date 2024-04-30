@@ -27,7 +27,9 @@
     "footer01part02": "sur un échantillon de pages en s’appuyant sur le moteur",
     "footer02": "Fait avec",
     "footer03": "amour",
-    "footer04": "par <a href=\"https://www.temesis.com/\">Temesis</a>, membre du groupe <a href=\"https://www.ctrla.fr/\">Ctrl-a</a>, pour un numérique juste et utile."
+    "footer04": "par",
+    "footer05": ", membre du groupe",
+    "footer06": ", pour un numérique juste et utile."
   },
   "rules": {
     "accesskeys": {
