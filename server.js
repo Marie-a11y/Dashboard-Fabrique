@@ -47,7 +47,7 @@ async function runAxeCoreTests(page, url, analysisDate) {
             return axe.run(document, {
                 runOnly: {
                     type: 'tag',
-                    values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22a']
+                    values: ['wcag2a','wcag2aa','wcag21a','wcag21aa']
                 }
             });
         });
