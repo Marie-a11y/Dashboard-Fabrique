@@ -2,39 +2,96 @@
    "lang":"fr",
    "sites":[
       {
-         "siteName":"Service-Public.fr",
+         "siteName":"1000jours",
          "siteUrls":[
-            "https://www.service-public.fr/",
-            "https://www.service-public.fr/P10017",
-            "https://www.service-public.fr/particuliers/actualites/A14434",
-            "https://www.service-public.fr/particuliers/vosdroits/F12242"
+            "https://1000jours.fabrique.social.gouv.fr/"
          ]
       },
       {
-         "siteName":"impots.gouv.fr",
+         "siteName":"Egapro",
          "siteUrls":[
-            "https://www.impots.gouv.fr/accueil",
-            "https://www.impots.gouv.fr/contacts",
-            "https://www.impots.gouv.fr/actualite/transfert-la-dgfip-du-recouvrement-de-laccise-sur-les-tabacs-et-les-alcools-depuis-le-1er",
-            "https://www.impots.gouv.fr/particulier/declarer-mes-revenus"
+            "https://egapro.travail.gouv.fr/",
+            "https://egapro.travail.gouv.fr/index-egapro/simulateur/commencer",
+            "https://egapro.travail.gouv.fr/index-egapro/simulateur/effectifs",
+            "https://egapro.travail.gouv.fr/index-egapro/recherche",
+            "https://egapro.travail.gouv.fr/representation-equilibree/recherche",
+            "https://egapro.travail.gouv.fr/representation-equilibree",
+            "https://egapro.travail.gouv.fr/declaration-accessibilite",
+            "https://egapro.travail.gouv.fr/mentions-legales"
          ]
       },
       {
-         "siteName":"Leboncoin",
+         "siteName":"CEJ",
          "siteUrls":[
-            "https://www.leboncoin.fr/",
-            "https://www.leboncoin.fr/_immobilier_/offres",
-            "https://www.leboncoin.fr/deposer-une-annonce",
-            "https://www.leboncoin.fr/boutique/11532/postulez_aux_offres_d_emploi_leboncoin.htm"
+            "https://cje.fabrique.social.gouv.fr/",
+            "https://cje.fabrique.social.gouv.fr/mentions-legales"
          ]
       },
       {
-         "siteName":"SNCF Connect",
+         "siteName":"EnfantsDuSpectacle",
          "siteUrls":[
-            "https://www.sncf-connect.com/",
-            "https://www.sncf-connect.com/aide/contact",
-            "https://www.sncf-connect.com/app/catalogue",
-            "https://www.sncf-connect.com/app/trips"
+            "https://enfants-du-spectacle.fabrique.social.gouv.fr/",
+            "https://formulaire-enfants-du-spectacle.fabrique.social.gouv.fr/login?callbackUrl=https%3A%2F%2Fformulaire-enfants-du-spectacle.fabrique.social.gouv.fr%2F",
+            "https://formulaire-enfants-du-spectacle.fabrique.social.gouv.fr/faq",
+            "https://formulaire-enfants-du-spectacle.fabrique.social.gouv.fr/mentions",
+            "https://formulaire-enfants-du-spectacle.fabrique.social.gouv.fr/accessibilite"
+         ]
+      },
+      {
+         "siteName":"DOMIFA",
+         "siteUrls":[
+            "https://domifa.fabrique.social.gouv.fr/",
+            "https://domifa.fabrique.social.gouv.fr/structures/inscription",
+            "https://domifa.fabrique.social.gouv.fr/news",
+            "https://domifa.fabrique.social.gouv.fr/faq",
+            "https://domifa.fabrique.social.gouv.fr/plan-site",
+            "https://domifa.fabrique.social.gouv.fr/mentions-legales",
+            "https://domifa.fabrique.social.gouv.fr/accessibilite"
+         ]
+      },
+      {
+         "siteName":"Archifiltre",
+         "siteUrls":[
+            "https://archifiltre.fabrique.social.gouv.fr/",
+            "https://archifiltre.fabrique.social.gouv.fr/archifiltre-doc/",
+            "https://archifiltre.fabrique.social.gouv.fr/archifiltre-mails/",
+            "https://archifiltre.fabrique.social.gouv.fr/archifiltre-pour-les-archivistes/",
+            "https://archifiltre.fabrique.social.gouv.fr/documentation-et-faq/",
+            "https://archifiltre.fabrique.social.gouv.fr/developpement/",
+            "https://archifiltre.fabrique.social.gouv.fr/qui-sommes-nous/",
+            "https://archifiltre.fabrique.social.gouv.fr/statistiques/",
+            "https://archifiltre.fabrique.social.gouv.fr/accessibilite/",
+            "https://archifiltre.fabrique.social.gouv.fr/mentions-legales/",
+            "https://archifiltre.fabrique.social.gouv.fr/plan-du-site/"
+         ]
+      },
+      {
+         "siteName":"OZensemble",
+         "siteUrls":[
+            "https://ozensemble.fabrique.social.gouv.fr/",
+            "https://ozensemble.fabrique.social.gouv.fr/plan",
+            "https://ozensemble.fabrique.social.gouv.fr/blog",
+            "https://ozensemble.fabrique.social.gouv.fr/blog/sevrage-alcoolique-comprendre-la-duree-et-les-etapes",
+            "https://ozensemble.fabrique.social.gouv.fr/partners"
+         ]
+      },
+      {
+         "siteName":"FranceVAE",
+         "siteUrls":[
+            "https://vae.gouv.fr/",
+            "https://vae.gouv.fr/espace-professionnel/",
+            "https://vae.gouv.fr/inscription-candidat/?certificationId=891bcb7b-b1e2-4cf9-bfd6-b0dda36a6971",
+            "https://vae.gouv.fr/savoir-plus/",
+            "https://vae.gouv.fr/savoir-plus/articles/etapes-parcours-france-vae/",
+            "https://vae.gouv.fr/savoir-plus/articles/reglementation-vae/",
+            "https://vae.gouv.fr/regions/",
+            "https://vae.gouv.fr/faq/",
+            "https://vae.gouv.fr/nous-contacter/",
+            "https://vae.gouv.fr/candidat/login/",
+            "https://auth.vae.gouv.fr/realms/reva/protocol/openid-connect/auth?client_id=reva-admin&redirect_uri=https%3A%2F%2Fvae.gouv.fr%2Fadmin2%2F&state=97b8a921-82cb-4823-923d-7010219cf112&response_mode=fragment&response_type=code&scope=openid&nonce=32a5ae1c-0e7e-4156-8bc2-78d8e1ecf836&code_challenge=TGJHteGkdRpWo7cOQETE0i5COOEm8q6AhPhcfxLeyyY&code_challenge_method=S256",
+            "https://vae.gouv.fr/plan-du-site/",
+            "https://vae.gouv.fr/mentions-legales/",
+            "https://vae.gouv.fr/declaration-accessibilite/"
          ]
       }
    ]

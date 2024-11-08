@@ -5,7 +5,7 @@
   "author": "Olivier Keul (https://www.temesis.com/)",
   "main": "server.js",
   "dependencies": {
-    "axe-core": "^4.9.0",
+    "axe-core": "^4.10.2",
     "canvas": "^2.11.2",
     "cssnano": "^6.1.0",
     "ejs": "^3.1.9",

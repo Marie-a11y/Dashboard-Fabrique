@@ -1,19 +1,19 @@
 :root{
-  --color-grey-alpha:#ecf0f1;
+  --color-grey-alpha:#F6F6F6;
   --color-grey-beta:#dee2e6;
-  --color-black-alpha:#262A2D;
-  --color-black-beta:#343434;
+  --color-marine-alpha:#00008B;
+  --color-black-beta:#333333;
   --color-white-alpha:#fff;
   --color-white-beta: #F5F9FC;
-  --color-blue-alpha:#3a6a91;
+  --color-blue-alpha:#EAEDFC;
   --color-yellow-alpha:#fefaed;
   --color-yellow-beta:#f4ab01;
 }
 
 /* GENERIC */
 body {
-  background: var(--color-grey-alpha);
-  color: var(--color-black-alpha);
+  background: var(--color-white-alpha);
+  color: var(--color-marine-alpha);
   font-family: Arial,sans-serif;
   margin: 0;
 }
@@ -44,15 +44,17 @@ a, button {
   height: 100%;
   z-index: 1;
   content: '';
-  background: linear-gradient(260deg, rgba(58, 106, 145, 0.00) 0%, rgba(58, 106, 145, 0.90) 20%, #3A6A91 50%, rgba(58, 106, 145, 0.9) 80%, rgba(58, 106, 145, 0.00) 100%);
 }
-.header, .footer {
+.header {
   background-color: var(--color-blue-alpha);
-  color: var(--color-white-alpha);
+  color: var(--color-marine-alpha);
   padding: 2rem;
 }
 .footer {
   text-align: center;
+  background-color: var(--color-grey-alpha);
+  color: var(--color-black-beta);
+  padding: 2rem;
 }
 .footer li{
   margin-bottom: .5rem;
@@ -81,6 +83,9 @@ a, button {
 .site {
   margin: 3rem 0;
 }
+div.analysis:not(.disclosure-container){
+  border-bottom: 1px solid var(--color-marine-alpha);
+}
 .chart {
   margin-bottom: 1rem;
 }
@@ -89,6 +94,9 @@ a, button {
 }
 
 /* SECTION OBJECTIVES */ 
+.section--obj {
+  background: var(--color-blue-alpha);
+}
 .section--obj ul {
   display: flex;
   list-style-type: none;
@@ -171,7 +179,7 @@ a, button {
   padding: .25rem 0;
 }
 .disclosure-trigger {
-  background: var(--color-blue-alpha);
+  background: var(--color-marine-alpha);
   border: 2px solid var(--color-white-alpha);
   border-radius: 0.5em;
   color: var(--color-white-alpha);
@@ -179,9 +187,9 @@ a, button {
   cursor: pointer;
 }
 li .disclosure-trigger {
-  background: var(--color-white-beta);
-  color: var(--color-black-alpha);
-  border-color: var( --color-blue-alpha);
+  background: var(--color-white-alpha);
+  color: var(--color-marine-alph);
+  border-color: var(--color-marine-alph);
   border-width: 1px;
 }
 li .disclosure-trigger:focus {
@@ -217,7 +225,7 @@ li .disclosure-trigger:focus {
 .table table {
   width:100%;
   border-collapse:collapse;
-  border:1px solid var(--color-grey-beta);
+  border:1px solid var(--color-black-beta);
   margin-bottom:1.5rem
 }
 .table caption {
@@ -225,10 +233,10 @@ li .disclosure-trigger:focus {
 }
 .table thead th {
   vertical-align:middle;
-  border-bottom:2px solid var(--color-grey-beta);
-  background: var( --color-blue-alpha);
-  color: white;
-  border-color: white;
+  border-bottom:2px solid var(--color-black-beta);
+  background: var(--color-grey-alpha);
+  color: var(--color-black-alpha);
+  border-color: var(--color-black-beta);
 }
 .table thead th span {
   font-size:.75em
@@ -236,11 +244,11 @@ li .disclosure-trigger:focus {
 .table td,
 .table th {
   padding:.75rem;
-  border:1px solid var(--color-grey-beta);
-  border: 1px solid var( --color-blue-alpha);
+  border:1px solid var(--color-black-beta);
+  border: 1px solid var(--color-black-beta);
 }
 .table tbody tr:nth-of-type(odd) {
-  background-color:rgba(0,0,0,.05)
+  background-color:var(--color-white-alpha);
 }
 
 /* MQ */

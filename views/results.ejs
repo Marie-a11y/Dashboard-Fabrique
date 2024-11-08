@@ -20,43 +20,6 @@
     </h1>
   </header>
   <main role="main">
-    <div class="section section--obj">
-      <div class="wrapper">
-        <h2 class="title-2"><%= langData.i18n.objectives %></h2>
-        <ul>
-          <li>
-            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="/img/sprite.svg#monitor"></use></svg></div>
-            <%- (langData.i18n.objectives01) %>
-          </li>
-          <li>
-            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="/img/sprite.svg#tendance"></use></svg></div>
-            <%- (langData.i18n.objectives02) %>
-          </li>
-          <li>
-            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="/img/sprite.svg#analyser"></use></svg></div>
-            <%- (langData.i18n.objectives03) %>
-          </li>
-          <li>
-            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="/img/sprite.svg#correctives"></use></svg></div>
-            <%- (langData.i18n.objectives04) %>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="section section--lim">
-      <div class="wrapper">
-        <h2 class="title-2"><%= langData.i18n.limits %></h2>
-        <div class="list">
-          <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="/img/sprite.svg#limitations"></use></svg></div>
-          <ul>
-            <li><%= langData.i18n.limits01 %></li>
-            <li><%= langData.i18n.limits02 %></li>
-            <li><%= langData.i18n.limits03 %> (<a href="https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/" lang="en">Building the most inaccessible site possible with a perfect Lighthouse score</a>)</li>
-            <li><%= langData.i18n.limits04 %></li>
-          </ul>
-        </div>
-      </div>
-    </div>
     <div class="section">
       <div class="wrapper">
         <% if (!Object.keys(results).length) { %>
@@ -162,6 +125,43 @@
           <% siteIndex++; %>
         </div>
         <% } %>
+      </div>
+    </div>
+    <div class="section section--obj">
+      <div class="wrapper">
+        <h2 class="title-2"><%= langData.i18n.objectives %></h2>
+        <ul>
+          <li>
+            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="/img/sprite.svg#monitor"></use></svg></div>
+            <%- (langData.i18n.objectives01) %>
+          </li>
+          <li>
+            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="/img/sprite.svg#tendance"></use></svg></div>
+            <%- (langData.i18n.objectives02) %>
+          </li>
+          <li>
+            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="/img/sprite.svg#analyser"></use></svg></div>
+            <%- (langData.i18n.objectives03) %>
+          </li>
+          <li>
+            <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="/img/sprite.svg#correctives"></use></svg></div>
+            <%- (langData.i18n.objectives04) %>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section section--lim">
+      <div class="wrapper">
+        <h2 class="title-2"><%= langData.i18n.limits %></h2>
+        <div class="list">
+          <div class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="/img/sprite.svg#limitations"></use></svg></div>
+          <ul>
+            <li><%= langData.i18n.limits01 %></li>
+            <li><%= langData.i18n.limits02 %></li>
+            <li><%= langData.i18n.limits03 %> (<a href="https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/" lang="en">Building the most inaccessible site possible with a perfect Lighthouse score</a>)</li>
+            <li><%= langData.i18n.limits04 %></li>
+          </ul>
+        </div>
       </div>
     </div>
   </main>
